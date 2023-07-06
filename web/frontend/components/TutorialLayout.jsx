@@ -91,18 +91,22 @@ export function SettingsGuideCard() {
     <LegacyCard title="Settings in the theme editor">
       <LegacyCard.Section>
         <Divider />
-        <HorizontalGrid columns={['oneThird', 'twoThirds']} gap="3">
-          <img
-            alt=""
-            width="100%"
-            height="100%"
-            src="https://cdn.shopify.com/s/files/1/0714/9666/3337/files/Settings_1.png"
-            style={{
-              borderRight: '1px solid #000',
-            }}
-          />
+        {window.innerWidth > 1000 ? (
+          <HorizontalGrid columns={['oneThird', 'twoThirds']} gap="3">
+            <img
+              alt=""
+              width="100%"
+              height="100%"
+              src="https://cdn.shopify.com/s/files/1/0714/9666/3337/files/Settings_1.png"
+              style={{
+                borderRight: '1px solid #000',
+              }}
+            />
+            <DescriptionList items={generalSettingsItems} />
+          </HorizontalGrid>
+        ) : (
           <DescriptionList items={generalSettingsItems} />
-        </HorizontalGrid>
+        )}
       </LegacyCard.Section>
     </LegacyCard>
   );
