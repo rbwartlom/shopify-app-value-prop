@@ -35,10 +35,16 @@ export function TutorialCalloutCard() {
 export default function HomeLayout() {
   return (
     <>
-      <Layout sectioned>
-        <AppDemoCard />
-        <SupportCalloutCard />
-        <TutorialCalloutCard />
+      <Layout>
+        <Layout.Section>
+          <AppDemoCard />
+        </Layout.Section>
+        <Layout.Section oneHalf>
+          <SupportCalloutCard />
+        </Layout.Section>
+        <Layout.Section oneHalf>
+          <TutorialCalloutCard />
+        </Layout.Section>
       </Layout>
     </>
   );
