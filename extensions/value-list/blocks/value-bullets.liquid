@@ -1,0 +1,237 @@
+{% assign blockId = block.id %}
+
+{% if block.settings.as-bullets %}
+
+  <style>
+    /* @prettify-ignore-start */
+    #{{ blockId }} .value-container {
+      display: flex;
+      align-items: center;
+    }
+    #{{ blockId }} .value-padding-between {
+      padding-top: {{ block.settings.value-padding-between }}em;
+    }
+    #{{ blockId }} .value-prop-text {
+      min-width: 0;
+      overflow-wrap: break-word; 
+    }
+    #{{ blockId }} .value-image {
+      margin-right: 0.8em;
+    }
+/* @prettify-ignore-end */</style>
+
+{% else %}
+
+  <style>
+    /* @prettify-ignore-start */
+      #{{ blockId }} .value-bg-flex-wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: {{ block.settings.value-padding-between }}em
+      }
+      #{{ blockId }} .value-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* related to value-bg-flex-wrapper */
+        flex: 1;
+        min-width: 0;
+      }
+      #{{ blockId }} .value-prop-text {
+        overflow-wrap: anywhere; 
+        min-width: 0;
+      }
+      #{{ blockId }} .value-image {
+        margin-bottom: 0.2em;
+      }
+      #{{ blockId }} .fourfive {
+        display: none;
+      }
+  /* @prettify-ignore-end */</style>
+
+{% endif %}
+
+<style>
+  /* @prettify-ignore-start */
+  #{{ blockId }} .background {
+    background-color: {{ block.settings.background-color }};
+    border-radius: {{ block.settings.background-corner-radius }}px;
+    padding: {{ block.settings.background-padding }}em;
+  }
+  #{{ blockId }} .value-prop-text {
+      color: {{ block.settings.value-color }};    
+      font-size: {{ block.settings.value-text-size }}em;
+  }
+/* @prettify-ignore-end */</style>
+
+{% comment %}
+programming in a for loop would be a paid due to poorly structured data from schema tags
+{% endcomment %}{% assign icon_size = block.settings.icon-size %}
+<div id={{ blockId }}>
+  <div class="background value-bg-flex-wrapper">
+    {% render 'value-component'
+     , text: block.settings.value-text-1,
+     image: block.settings.value-image-1,
+     icon-size: icon_size,
+     first-block: true %}
+
+    {% render 'value-component'
+     , text: block.settings.value-text-2,
+     image: block.settings.value-image-2,
+     icon-size: icon_size, %}
+
+    {% render 'value-component'
+     , text: block.settings.value-text-3,
+     image: block.settings.value-image-3,
+     icon-size: icon_size, %}
+
+    {% render 'value-component'
+     , text: block.settings.value-text-4,
+     image: block.settings.value-image-4,
+     icon-size: icon_size, %}
+
+    {% render 'value-component'
+     , text: block.settings.value-text-5,
+     image: block.settings.value-image-5,
+     icon-size: icon_size %}
+
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Value icons",
+    "target": "section",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Use this section to display 1-5 value propositions with optional icons. You can also add a background to this section."
+      },
+      {
+        "type": "header",
+        "content": "General settings",
+        "info": "Style settings that are applied to the entire section"
+      },
+      {
+        "type": "checkbox",
+        "id": "as-bullets",
+        "label": "Display as bullets",
+        "info": "Each value and icon gets a full line",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "value-color",
+        "label": "Text color",
+        "default": "#000000"
+      }, {
+        "type": "range",
+        "id": "value-text-size",
+        "label": "Text size",
+        "min": 0.2,
+        "max": 3,
+        "step": 0.2,
+        "default": 1,
+        "unit": "em"
+      }, {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background color"
+      }, {
+        "type": "range",
+        "id": "background-corner-radius",
+        "label": "Background corner radius",
+        "min": 0,
+        "max": 25,
+        "step": 1,
+        "default": 10,
+        "unit": "px"
+      }, {
+        "type": "range",
+        "id": "background-padding",
+        "label": "Background padding",
+        "min": 0,
+        "max": 2,
+        "step": 0.2,
+        "default": 0,
+        "unit": "em"
+      }, {
+        "type": "header",
+        "content": "Add value propositions",
+        "info": "To not display a value prop, leave the text field blank. Icons are optional."
+      }, {
+        "type": "range",
+        "id": "icon-size",
+        "label": "Icon size",
+        "min": 5,
+        "max": 110,
+        "step": 5,
+        "default": 40,
+        "unit": "px"
+      }, {
+        "type": "range",
+        "id": "value-padding-between",
+        "label": "Space between value propositions",
+        "info": "Only applies if you have set more than one value.",
+        "min": 0,
+        "max": 2,
+        "step": 0.2,
+        "default": 1,
+        "unit": "em"
+      }, {
+        "type": "header",
+        "content": "Value prop 1"
+      }, {
+        "type": "image_picker",
+        "id": "value-image-1",
+        "label": "Icon for value prop 1"
+      }, {
+        "type": "text",
+        "id": "value-text-1",
+        "label": "Text for value prop 1",
+        "default": "Value 1"
+      }, {
+        "type": "header",
+        "content": "Value prop 2"
+      }, {
+        "type": "image_picker",
+        "id": "value-image-2",
+        "label": "Icon for value prop 2"
+      }, {
+        "type": "text",
+        "id": "value-text-2",
+        "label": "Text for value prop 2",
+        "default": "Value 2"
+      }, {
+        "type": "header",
+        "content": "Value prop 3"
+      }, {
+        "type": "image_picker",
+        "id": "value-image-3",
+        "label": "Icon for value prop 3"
+      }, {
+        "type": "text",
+        "id": "value-text-3",
+        "label": "Icon for value prop 3",
+        "default": "Value 3"
+      }, {
+        "type": "image_picker",
+        "id": "value-image-4",
+        "label": "Icon for value prop 4 "
+      }, {
+        "type": "text",
+        "id": "value-text-4",
+        "label": "Text for value prop 4"
+      }, {
+        "type": "image_picker",
+        "id": "value-image-5",
+        "label": "Icon for value prop 5"
+      }, {
+        "type": "text",
+        "id": "value-text-5",
+        "label": "Text for value prop 5"
+      }
+    ]
+  }
+{% endschema %}

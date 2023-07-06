@@ -1,0 +1,22 @@
+{% comment %} needs to have props text, image, icon-size, first-block (optional, defalt functionality as false) 
+{% endcomment %}
+
+{% assign padding_class = 'value-padding-between' %}
+{% if first-block == true %}
+  {% assign padding_class = '' %}
+{% endif %}
+
+{% unless text == empty %}
+  <div class="value-container {{ padding_class }}">
+    {% if image %}
+      <img
+        src="{{ image |  image_url: width: '200', height: '200' }}"
+        width={{ icon-size }}
+        height={{ icon-size }}
+        class="value-image">
+    {% endif %}
+    <div class="value-prop-text">
+      {{ text }}
+    </div>
+  </div>
+{% endunless %}
