@@ -1,12 +1,4 @@
 {
-  "HomePage": {
-    "heading": "Nice work on building a Shopify app 🎉",
-    "learnMore": "Learn more about building out your app in <ShopifyTutorialLink>this Shopify tutorial</ShopifyTutorialLink> 📚",
-    "startPopulatingYourApp": "Ready to go? Start populating your app with some sample products to view and test in your store.",
-    "title": "App name",
-    "trophyAltText": "Nice work on building a Shopify app",
-    "yourAppIsReadyToExplore": "Your app is ready to explore! It contains everything you need to get started including the <PolarisLink>Polaris design system</PolarisLink>, <AdminApiLink>Shopify Admin API</AdminApiLink>, and <AppBridgeLink>App Bridge</AppBridgeLink> UI library and components."
-  },
   "NavigationMenu": {
     "pageName": "Page name"
   },
@@ -14,28 +6,155 @@
     "description": "Check the URL and try again, or use the search bar to find what you need.",
     "heading": "There is no page at this address"
   },
-  "PageName": {
-    "body": "Body",
-    "heading": "Heading",
-    "primaryAction": "Primary action",
-    "secondaryAction": "Secondary action",
-    "title": "Page name"
-  },
-  "ProductsCard": {
-    "description": "Sample products are created with a default title and price. You can remove them at any time.",
-    "errorCreatingProductsToast": "There was an error creating products",
-    "populateProductsButton": {
-      "one": "Populate {{count}} product",
-      "other": "Populate {{count}} products"
-    },
-    "productsCreatedToast": {
-      "one": "{{count}} product created!",
-      "other": "{{count}} products created!"
-    },
-    "title": "Product Counter",
-    "totalProductsHeading": "TOTAL PRODUCTS"
-  },
   "SupportPage": {
-    "title": "Having Problems?"
+    "title": "Contact us", 
+    "subtitle": "We respond within 24hrs"
+  },
+  "TutorialPage": {
+    "title": "Setup Guide"
+  },
+  "IndexPage": {
+    "title": "Home",
+    "subtitle": "Iconex - Easily communicate value propositions using fast & fully custom icons"
+  },
+  "HomeLayout": {
+    "SupportCalloutCard": {
+      "title": "Having problems?",
+      "buttonContent": "Contact us",
+      "description": "Iconex is happy to help, shoot us a message and we'll respond within 24hrs:)"
+    },
+    "TutorialCalloutCard": {
+      "title": "Confused where to start?",
+      "buttonContent": "Go to our setup guide",
+      "description": "Check out our guide and video to learn how to get started."
+    }
+  },
+  "EditorSettings": {
+    "displayAsBullets": "Display as bullets",
+    "textColor": "Text color",
+    "textSize": "Text size",
+    "backgroundColor": "Background color",
+    "backgroundCornerRadius": "Background corner radius",
+    "backgroundPadding": "Background padding",
+    "iconSize": "Icon size",
+    "spaceBetween": "Space between",
+    "iconFor": "Icon for x",
+    "textFor": "Text for x"
+  },
+  "AppDemoCard": {
+    "title": "Styling Examples",
+    "description": "Some examples of how Iconex can be styled & modified in the theme editor.",
+    "TabInfo": {
+      "backgroundToggle": "Display Background",
+      "previewTitle": "Preview:",
+      "editorConfigTitle": "Then configure the following settings:",
+      "setupGuideLinkText": "Visit our full setup guide",
+      "themeGuideButton": {
+        "hide": "Hide",
+        "show": "Show",
+        "text": "how to add this to your theme"
+      }
+    },
+    "tabs": {
+      "bullet": {
+        "title": "Icon bullets",
+        "specialInfo": "Supports up to 5 value propositions. Icons are optional",
+        "editorConfig": {
+          "displayAsBullets": "checked",
+          "textColor": "Black",
+          "textSize": "1em",
+          "backgroundColor": "#97c691",
+          "backgroundCornerRadius": "10px",
+          "backgroundPadding": "1em",
+          "iconSize": "35px",
+          "spaceBetween": "0.8em"
+        }
+      },
+      "icon": {
+        "title": "Icons",
+        "specialInfo": "Supports up to 3 value propositions. Icons are optional",
+        "editorConfig": {
+          "displayAsBullets": "unchecked",
+          "textColor": "Black",
+          "textSize": "1em",
+          "backgroundColor": "#a4baef",
+          "backgroundCornerRadius": "10px",
+          "backgroundPadding": "1em",
+          "iconSize": "35px",
+          "spaceBetween": "0.8em"
+        }
+      },
+      "notification": {
+        "title": "Notification",
+        "specialInfo": "Bullet-style value proposition but uses one bullet and a background",
+        "editorConfig": {
+          "info": "Add only one value proposition text",
+          "displayAsBullets": "checked",
+          "textColor": "White",
+          "textSize": "1em",
+          "backgroundColor": "#d10000",
+          "backgroundCornerRadius": "12px",
+          "backgroundPadding": "0.8em",
+          "iconSize": "35px"
+        }
+      },
+      "plain": {
+        "title": "No icons",
+        "specialInfo": "A single value proposition without icons", 
+        "editorConfig": {
+          "info": "Don't add any icons to display only text",
+          "textColor": "Black",
+          "textSize": "1em",
+          "backgroundColor": "#a9e5f5",
+          "backgroundCornerRadius": "25px",
+          "backgroundPadding": "1.4em"
+        }
+      }
+    }
+  }, 
+  "SupportLayout": {
+    "title": "We're here to help",
+    "subtitle": "Having Issues? We're happy to help, just shoot us a quick message through the contact form below :) <br> We respond within 24hrs",
+    "contactForm": {
+      "nameLabel": "Your name",
+      "emailLabel": "Your email",
+      "emailHelpText": "helpText",
+      "messageLabel": "Your Message",
+      "submitButtonText": "Send Message"
+    },
+    "formErrorBanner": {
+      "title": "Message could not be sent, please send us an email instead.",
+      "emailButtonText": "Send us an email",
+      "errorMessage": "The server returned the following error:"
+    }
+  },
+  "Tutorial": {
+    "InstallationGuideSection": {
+      "title": "Installation Guide",
+      "step1": "From your Shopify Admin, go to <strong>Online Store > Themes</strong>.",
+      "step2": "Click the <strong>Customize</strong> button of your active Theme",
+      "step3": "Click on <strong>Add Section</strong> anywhere in the sidebar or on <strong>Add Block</strong> in the \"Product information\" Section.",
+      "step4": "Select <strong>Value Propositions</strong> from the list of sections/blocks.",
+      "step5": "Click on the created section/block to open the settings panel."
+    },
+    "VideoCard": {
+      "title": "Watch the video guide",
+      "description": "This video will walk you through how to install and configure this app",
+      "buttonText": "Watch video",
+      "modalTitle": "How to install and configure this app"
+    }
+  },
+  "SettingsGuideCard": {
+    "title": "Settings in the theme editor",
+    "displayAsBullets":  "When checked, displays the value propositions beneath each other as bullets. Otherwise, displays them in one row beneath their icons.",
+    "textColor": "Changes the color of the text of the value propositions",
+    "textSize": "Changes the size of the text of the value propositions",
+    "backgroundColor": "When set, shows a container with the given background color around the value propositions",
+    "backgroundCornerRadius": "Rounds the corners of the background container. For square corners, set to 0px.",
+    "backgroundPadding": "When set, adds padding around the value propositions inside the background container",
+    "iconSize": "Changes the size of the icons",
+    "spaceBetween": "Is only applied when there are multiple value propositions. When 'Display as bullets' is checked, this will be the space added between bullets. Otherwise, this will add space between the value propositions in the row.",
+    "iconFor": "Only displayed if corresponding text is set. For best results, upload transparent PNG files.",
+    "textFor": "To not display a value proposition, leave the text field empty."
   }
 }

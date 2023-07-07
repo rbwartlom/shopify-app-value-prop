@@ -9,86 +9,90 @@ import {
 } from '@shopify/polaris';
 import {useState} from 'react';
 
-//supports props.children
-export function InstallationGuideSection(props) {
+import {useTranslation, Trans} from 'react-i18next';
+
+export function InstallationGuideSection() {
+  const {t} = useTranslation();
+
   return (
     <LegacyCard.Section>
       <List type="number">
         <List.Item>
-          From your Shopify Admin, go to{' '}
-          <strong>Online Store {`>`} Themes</strong>.
-        </List.Item>
-        <List.Item>Click the "Customize" button of your active Theme</List.Item>
-        <List.Item>
-          Click on <strong>Add Section</strong> anywhere in the sidebar or on{' '}
-          <strong>Add Block</strong> in the "Product information" Section.
+          <Trans i18nKey="Tutorial.InstallationGuideSection.step1">
+            {t('Tutorial.InstallationGuideSection.step1')}
+          </Trans>
         </List.Item>
         <List.Item>
-          Select <strong>Value Propositions</strong> from the list of
-          sections/blocks.
+          <Trans i18nKey="Tutorial.InstallationGuideSection.step2">
+            {t('Tutorial.InstallationGuideSection.step2')}
+          </Trans>
         </List.Item>
         <List.Item>
-          Click on the created section/block to open the settings panel.
+          <Trans i18nKey="Tutorial.InstallationGuideSection.step3">
+            {t('Tutorial.InstallationGuideSection.step3')}
+          </Trans>
+        </List.Item>
+        <List.Item>
+          <Trans i18nKey="Tutorial.InstallationGuideSection.step4">
+            {t('Tutorial.InstallationGuideSection.step4')}
+          </Trans>
+        </List.Item>
+        <List.Item>
+          {t('Tutorial.InstallationGuideSection.step5')}
         </List.Item>
       </List>
-      {props.children}
     </LegacyCard.Section>
   );
 }
 
 export function SettingsGuideCard() {
+  const {t} = useTranslation();
+
   const generalSettingsItems = [
     {
-      term: 'Display as bullets',
-      description:
-        'When checked, displays the value propositions beneath each other as bullets. Otherwise, displays them in one row beneath their icons.',
+      term: t('EditorSettings.displayAsBullets'),
+      description: t('SettingsGuideCard.displayAsBullets'),
     },
     {
-      term: 'Text color',
-      description: 'Changes the color of the text of the value propositions',
+      term: t('EditorSettings.textColor'),
+      description: t('SettingsGuideCard.textColor'),
     },
     {
-      term: 'Text size',
-      description: 'Changes the size of the text of the value propositions',
+      term: t('EditorSettings.textSize'),
+      description: t('SettingsGuideCard.textSize'),
     },
     {
-      term: 'Background color',
-      description:
-        'When set, shows a container with the given background color around the value propositions',
+      term: t('EditorSettings.backgroundColor'),
+      description: t('SettingsGuideCard.backgroundColor'),
     },
     {
-      term: 'Background corner radius',
-      description:
-        'Rounds the corners of the background container. For square corners, set to 0px.',
+      term: t('EditorSettings.backgroundCornerRadius'),
+      description: t('SettingsGuideCard.backgroundCornerRadius'),
     },
     {
-      term: 'Background padding',
-      description:
-        'When set, adds padding around the value propositions inside the background container',
+      term: t('EditorSettings.backgroundPadding'),
+      description: t('SettingsGuideCard.backgroundPadding'),
     },
     {
-      term: 'Icon size',
-      description: 'Changes the size of the icons',
+      term: t('EditorSettings.iconSize'),
+      description: t('SettingsGuideCard.iconSize'),
     },
     {
-      term: 'Space between',
-      description:
-        'Is only applied when there are multiple value propositions. When "Display as bullets" is checked, this will be the space added between bullets. Otherwise, this will add space between the value propositions in the row.',
+      term: t('EditorSettings.spaceBetween'),
+      description: t('SettingsGuideCard.spaceBetween'),
     },
     {
-      term: 'Icon for x (optional)',
-      description:
-        'Only displayed if corresponding text is set. For best results, upload transparent PNG files.',
+      term: t('EditorSettings.iconFor'),
+      description: t('SettingsGuideCard.iconFor'),
     },
     {
-      term: 'Text for x',
-      description:
-        'To not display a value proposition, leave the text field empty.',
+      term: t('EditorSettings.textFor'),
+      description: t('SettingsGuideCard.textFor'),
     },
   ];
 
   return (
-    <LegacyCard title="Settings in the theme editor">
+    <LegacyCard title={t('SettingsGuideCard.title')}>
       <LegacyCard.Section>
         <Divider />
         {window.innerWidth > 1000 ? (
@@ -113,6 +117,7 @@ export function SettingsGuideCard() {
 }
 
 export function VideoModalCard() {
+  const {t} = useTranslation();
   const [showVideo, setShowVideo] = useState(false);
 
   const LoomEmbed = () => {
@@ -142,18 +147,29 @@ export function VideoModalCard() {
     );
   };
 
+  /*
+    static content should be replaces from i18next react:
+    "VideoCard": {
+      "title": "Watch the video guide",
+      "description": "This video will walk you through how to install and configure this app",
+      "buttonText": "Watch video",
+      "modalTitle": "How to install and configure this app"
+    }
+    
+    */
+
   return (
     <>
       <MediaCard
-        title="Watch the video guide"
-        description="This video will walk you through how to install and configure this app"
+        title={t('Tutorial.VideoCard.title')}
+        description={t('Tutorial.VideoCard.description')}
         primaryAction={{
-          content: 'Watch video',
+          content: t('Tutorial.VideoCard.buttonText'),
           onAction: () => setShowVideo(true),
         }}
       />
       <Modal
-        title="How to install and configure this app"
+        title={t('Tutorial.VideoCard.modalTitle')}
         open={showVideo}
         onClose={() => setShowVideo(false)}
       >
@@ -166,10 +182,12 @@ export function VideoModalCard() {
 }
 
 export default function TutorialLayout() {
+  const {t} = useTranslation();
+
   return (
     <>
       <VideoModalCard />
-      <LegacyCard title="How to access the app from your Theme Editor">
+      <LegacyCard title={t('Tutorial.InstallationGuideSection.title')}>
         <InstallationGuideSection />
       </LegacyCard>
       <SettingsGuideCard />

@@ -10,6 +10,8 @@ import {
 import {useState} from 'react';
 import {InstallationGuideSection} from '../TutorialLayout';
 
+import {useTranslation} from 'react-i18next';
+
 const BulletDemo = ({background}) => {
   const backGroundStyle = background
     ? {
@@ -176,6 +178,8 @@ const TabInfo = (props) => {
     margin: 'auto',
   };
 
+  const {t} = useTranslation();
+
   const {PreviewComponent, specialInfo, hasBg, settings} = props;
 
   const [background, setBackground] = useState(true);
@@ -187,13 +191,13 @@ const TabInfo = (props) => {
         <p style={{paddingBottom: '10px'}}>{specialInfo}</p>
         {hasBg && (
           <Checkbox
-            label="Display Background"
+            label={t('AppDemoCard.TabInfo.backgroundToggle')}
             checked={background}
             onChange={setBackground}
           />
         )}
       </LegacyCard.Section>
-      <LegacyCard.Section title="Preview:" subdued>
+      <LegacyCard.Section title={t('AppDemoCard.TabInfo.previewTitle')} subdued>
         <div style={previewStyle}>
           <PreviewComponent background={background} />
         </div>
@@ -205,7 +209,10 @@ const TabInfo = (props) => {
           ariaControls="instructions-collapsible"
           onClick={() => setShowInstructions((prev) => !prev)}
         >
-          {showInstructions ? 'Hide' : 'Show'} how to add this to your theme
+          {showInstructions
+            ? t('AppDemoCard.TabInfo.themeGuideButton.hide')
+            : t('AppDemoCard.TabInfo.themeGuideButton.show')} {' '}
+          {t('AppDemoCard.TabInfo.themeGuideButton.text')}
         </Button>
         <Collapsible
           open={showInstructions}
@@ -213,13 +220,13 @@ const TabInfo = (props) => {
           id="instructions-collapsible"
         >
           <InstallationGuideSection />
-          <LegacyCard.Section title="Then configure the following settings:">
+          <LegacyCard.Section title={t('AppDemoCard.TabInfo.editorConfigTitle')}>
             <List>
               {settings.map((setting, index) => (
                 <List.Item key={index}>{setting}</List.Item>
               ))}
             </List>
-           <Link url='/tutorial'>Visit our full setup guide</Link>
+            <Link url="/tutorial">{t('AppDemoCard.TabInfo.setupGuideLinkText')}</Link>
           </LegacyCard.Section>
         </Collapsible>
       </LegacyCard.Section>
@@ -230,6 +237,8 @@ const TabInfo = (props) => {
 export default function AppDemoCard() {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
 
+  const {t} = useTranslation();
+
   const handleTabChange = (selectedTabIndex) => {
     setSelectedTabIndex(selectedTabIndex);
   };
@@ -237,98 +246,144 @@ export default function AppDemoCard() {
   const tabs = [
     {
       id: 'bullet',
-      content: 'Icon bullets',
+      content: t('AppDemoCard.tabs.bullet.title'),
       accessibilityLabel: 'Bullet-Style',
     },
     {
       id: 'icon',
-      content: 'Icons',
+      content: t('AppDemoCard.tabs.icon.title'),
     },
     {
       id: 'notification',
-      content: 'Notification',
+      content: t('AppDemoCard.tabs.notification.title'),
     },
     {
       id: 'plain',
-      content: 'No Icons',
+      content: t('AppDemoCard.tabs.plain.title'),
     },
   ];
 
   const tabContent = {
     bullet: {
-      title: 'Bullet-style value propositions',
-      specialInfo: `Supports up to 5 value propositions. Icons are optional`,
+      specialInfo: t('AppDemoCard.tabs.bullet.specialInfo'),
       hasBg: true,
       PreviewComponent: BulletDemo,
       settings: [
-        'Display as bullets: checked',
-        'Text color: Black',
-        'Text size: 1em',
-        'Background color: #97c691',
-        'Background corner radius: 10px',
-        'Background padding: 1em',
-        'Icon size: 35px',
-        'Space between: 0.8em',
+        `${t('EditorSettings.displayAsBullets')}: ${t(
+          'AppDemoCard.tabs.bullet.editorConfig.displayAsBullets',
+        )}`,
+        `${t('EditorSettings.textColor')}: ${t(
+          'AppDemoCard.tabs.bullet.editorConfig.textColor',
+        )}`,
+        `${t('EditorSettings.textSize')}: ${t(
+          'AppDemoCard.tabs.bullet.editorConfig.textSize',
+        )}`,
+        `${t('EditorSettings.backgroundColor')}: ${t(
+          'AppDemoCard.tabs.bullet.editorConfig.backgroundColor',
+        )}`,
+        `${t('EditorSettings.backgroundCornerRadius')}: ${t(
+          'AppDemoCard.tabs.bullet.editorConfig.backgroundCornerRadius',
+        )}`,
+        `${t('EditorSettings.backgroundPadding')}: ${t(
+          'AppDemoCard.tabs.bullet.editorConfig.backgroundPadding',
+        )}`,
+        `${t('EditorSettings.iconSize')}: ${t(
+          'AppDemoCard.tabs.bullet.editorConfig.iconSize',
+        )}`,
+        `${t('EditorSettings.spaceBetween')}: ${t(
+          'AppDemoCard.tabs.bullet.editorConfig.spaceBetween',
+        )}`,
       ],
     },
     icon: {
-      title: 'Icon-style value propositions',
-      specialInfo: 'Supports up to 3 value propositions. Icons are optional',
+      specialInfo: t('AppDemoCard.tabs.icon.specialInfo'),
       PreviewComponent: IconDemo,
       hasBg: true,
       settings: [
-        'Display as bullets: unchecked',
-        'Text color: Black',
-        'Text size: 1em',
-        'Background color: #a4baef',
-        'Background corner radius: 10px',
-        'Background padding: 1em',
-        'Icon size: 35px',
-        'Space between: 0.8em',
+        `${t('EditorSettings.displayAsBullets')}: ${t(
+          'AppDemoCard.tabs.icon.editorConfig.displayAsBullets',
+        )}`,
+        `${t('EditorSettings.textColor')}: ${t(
+          'AppDemoCard.tabs.icon.editorConfig.textColor',
+        )}`,
+        `${t('EditorSettings.textSize')}: ${t(
+          'AppDemoCard.tabs.icon.editorConfig.textSize',
+        )}`,
+        `${t('EditorSettings.backgroundColor')}: ${t(
+          'AppDemoCard.tabs.icon.editorConfig.backgroundColor',
+        )}`,
+        `${t('EditorSettings.backgroundCornerRadius')}: ${t(
+          'AppDemoCard.tabs.icon.editorConfig.backgroundCornerRadius',
+        )}`,
+        `${t('EditorSettings.backgroundPadding')}: ${t(
+          'AppDemoCard.tabs.icon.editorConfig.backgroundPadding',
+        )}`,
+        `${t('EditorSettings.iconSize')}: ${t(
+          'AppDemoCard.tabs.icon.editorConfig.iconSize',
+        )}`,
+        `${t('EditorSettings.spaceBetween')}: ${t(
+          'AppDemoCard.tabs.icon.editorConfig.spaceBetween',
+        )}`,
       ],
     },
     notification: {
-      title: 'Notification-Style',
-      specialInfo:
-        'Bullet-style value proposition but uses one bullet and a background',
+      specialInfo: t('AppDemoCard.tabs.notification.specialInfo'),
       hasBg: false,
       PreviewComponent: NotificationDemo,
       settings: [
-        'Add only one value proposition text',
-        'Display as bullets: checked',
-        'Text color: White',
-        'Text size: 1em',
-        'Background color: #d10000',
-        'Background corner radius: 12px',
-        'Background padding: 0.8em',
-        'Icon size: 35px',
+        `${t('AppDemoCard.tabs.notification.editorConfig.info')}`,
+        `${t('EditorSettings.displayAsBullets')}: ${t(
+          'AppDemoCard.tabs.notification.editorConfig.displayAsBullets',
+        )}`,
+        `${t('EditorSettings.textColor')}: ${t(
+          'AppDemoCard.tabs.notification.editorConfig.textColor',
+        )}`,
+        `${t('EditorSettings.textSize')}: ${t(
+          'AppDemoCard.tabs.notification.editorConfig.textSize',
+        )}`,
+        `${t('EditorSettings.backgroundColor')}: ${t(
+          'AppDemoCard.tabs.notification.editorConfig.backgroundColor',
+        )}`,
+        `${t('EditorSettings.backgroundCornerRadius')}: ${t(
+          'AppDemoCard.tabs.notification.editorConfig.backgroundCornerRadius',
+        )}`,
+        `${t('EditorSettings.backgroundPadding')}: ${t(
+          'AppDemoCard.tabs.notification.editorConfig.backgroundPadding',
+        )}`,
+        `${t('EditorSettings.iconSize')}: ${t(
+          'AppDemoCard.tabs.notification.editorConfig.iconSize',
+        )}`,
       ],
     },
     plain: {
-      title: 'Value Propositions without Icons',
-      specialInfo:
-        'A single value proposition without icons',
+      specialInfo: t('AppDemoCard.tabs.plain.specialInfo'),
       hasBg: true,
       PreviewComponent: PlainDemo,
       settings: [
-        'Add only one value proposition text',
-        "Don't add an icon for the inputted text",
-        'Text color: Black',
-        'Text size: 1em',
-        'Background color: #a9e5f5',
-        'Background corner radius: 25px',
-        'Background padding: 1.4em',
+        `${t('AppDemoCard.tabs.plain.editorConfig.info')}`,
+        `${t('EditorSettings.textColor')}: ${t(
+          'AppDemoCard.tabs.plain.editorConfig.textColor',
+        )}`,
+        `${t('EditorSettings.textSize')}: ${t(
+          'AppDemoCard.tabs.plain.editorConfig.textSize',
+        )}`,
+        `${t('EditorSettings.backgroundColor')}: ${t(
+          'AppDemoCard.tabs.plain.editorConfig.backgroundColor',
+        )}`,
+        `${t('EditorSettings.backgroundCornerRadius')}: ${t(
+          'AppDemoCard.tabs.plain.editorConfig.backgroundCornerRadius',
+        )}`,
+        `${t('EditorSettings.backgroundPadding')}: ${t(
+          'AppDemoCard.tabs.plain.editorConfig.backgroundPadding',
+        )}`,
       ],
     },
   };
 
   return (
-    <LegacyCard title="Styling examples">
+    <LegacyCard title={t('AppDemoCard.title')}>
       <LegacyCard.Section>
-        <p>
-          Some examples of how Iconito can be styled & modified in the
-          theme editor.
-        </p>
+        <p>{t('AppDemoCard.description')}</p>
       </LegacyCard.Section>
       <Tabs tabs={tabs} onSelect={handleTabChange} selected={selectedTabIndex}>
         <TabInfo {...tabContent[tabs[selectedTabIndex].id]} />

@@ -1,15 +1,19 @@
-import {Page, FooterHelp, Frame } from '@shopify/polaris';
+import {Page, Frame} from '@shopify/polaris';
 import SupportLayout from '../components/SupportLayout';
+import {useTranslation} from 'react-i18next';
 
 export default function SupportPage() {
+  const {t} = useTranslation();
+
   return (
-    <Page title="Contact us" subtitle="We respond within 24hrs" divider>
-      <Frame>
+    <Frame>
+      <Page
+        title={t('SupportPage.title')}
+        subtitle={t('SupportPage.subtitle')}
+        divider
+      >
         <SupportLayout />
-        <FooterHelp>
-            Made with 🖤
-        </FooterHelp>
-      </Frame>
-    </Page>
+      </Page>
+    </Frame>
   );
 }

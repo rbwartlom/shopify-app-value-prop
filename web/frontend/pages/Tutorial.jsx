@@ -1,12 +1,15 @@
-import {Page, FooterHelp} from '@shopify/polaris';
+import {Page, Frame} from '@shopify/polaris';
 import TutorialLayout from '../components/TutorialLayout';
+import {useTranslation} from 'react-i18next';
 
 export default function Tutorial() {
+  const {t} = useTranslation();
+
   return (
-    //shopify polaris page with a tutorial heading and a tutorial LegacyCard
-    <Page title="Setup Guide" divider>
-      <TutorialLayout />
-      <FooterHelp>Made with 🖤</FooterHelp>
-    </Page>
+    <Frame>
+      <Page title={t('TutorialPage.title')} divider>
+        <TutorialLayout />
+      </Page>
+    </Frame>
   );
 }

@@ -10,30 +10,35 @@ import {
   Layout,
 } from '@shopify/polaris';
 
+import {useTranslation, Trans} from 'react-i18next';
+
 import {sendEmail} from '../utils/emailService';
 
 const Notification = ({notification, hideNotification}) => {
+
+  const {t} = useTranslation();
+
   return (
     notification.content && (
       <Layout.Section>
-        (notification.isError ? (
+        {notification.isError ? (
         <Banner
-          title="Message could not be sent, please send us an email instead."
+          title={t('SupportLayout.formErrorBanner.title')}
           status="critical"
           onDismiss={hideNotification}
           action={{
-            content: 'Send us an email',
+            content: t('SupportLayout.formErrorBanner.emailButtonText'),
             onAction: () => {
               window.open('mailto:artelomo.tech@gmail.com');
             },
           }}
         >
-          <p>The server returned the following error:</p>
+          <p>{t('SupportLayout.formErrorBanner.errorMessage')}</p>
           <p>{notification.content}</p>
         </Banner>
         ) : (
         <Toast content={notification.content} onDismiss={hideNotification} />
-        ))
+        )}
       </Layout.Section>
     )
   );
@@ -47,6 +52,8 @@ export function SupportCard() {
     isError: false,
     content: null,
   });
+
+  const {t} = useTranslation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,53 +69,52 @@ export function SupportCard() {
     });
   };
 
+
   return (
-      <Layout>
-        <Notification
-          notification={notification}
-          hideNotification={hideNotification}
-        />
-        <Layout.Section>
-          <LegacyCard title="We're here to help">
-            <LegacyCard.Section>
-              <p>
-                Having Issues? We're happy to help, just shoot us a quick
-                message through the contact form below :) <br />
-                We respond within 24hrs
-              </p>
-            </LegacyCard.Section>
-            <LegacyCard.Section>
-              <Form onSubmit={handleSubmit}>
-                <FormLayout>
-                  <TextField
-                    type="text"
-                    value={name}
-                    onChange={setName}
-                    label="Your name"
-                  />
-                  <TextField
-                    type="email"
-                    value={email}
-                    onChange={setEmail}
-                    label="Your email"
-                    helpText="We'll use this only to contact you about your request"
-                  />
-                  <TextField
-                    type="text"
-                    value={message}
-                    onChange={setMessage}
-                    label="Your message"
-                    multiline={4}
-                  />
-                  <Button submit primary>
-                    Send
-                  </Button>
-                </FormLayout>
-              </Form>
-            </LegacyCard.Section>
-          </LegacyCard>
-        </Layout.Section>
-      </Layout>
+    <Layout>
+      <Notification
+        notification={notification}
+        hideNotification={hideNotification}
+      />
+      <Layout.Section>
+        <LegacyCard title={t('SupportLayout.title')}>
+          <LegacyCard.Section>
+            <Trans i18nKey="SupportLayout.subtitle">
+              <p>{t('SupportLayout.subtitle')}</p>
+            </Trans>
+          </LegacyCard.Section>
+          <LegacyCard.Section>
+            <Form onSubmit={handleSubmit}>
+              <FormLayout>
+                <TextField
+                  type="text"
+                  value={name}
+                  onChange={setName}
+                  label={t('SupportLayout.contactForm.nameLabel')}
+                />
+                <TextField
+                  type="email"
+                  value={email}
+                  onChange={setEmail}
+                  label={t('SupportLayout.contactForm.emailLabel')}
+                  helpText="We'll use this only to contact you about your request"
+                />
+                <TextField
+                  type="text"
+                  value={message}
+                  onChange={setMessage}
+                  label={t('SupportLayout.contactForm.messageLabel')}
+                  multiline={4}
+                />
+                <Button submit primary>
+                  {t('SupportLayout.contactForm.submitButtonText')}
+                </Button>
+              </FormLayout>
+            </Form>
+          </LegacyCard.Section>
+        </LegacyCard>
+      </Layout.Section>
+    </Layout>
   );
 }
 

@@ -1,33 +1,37 @@
 import {CalloutCard, Layout} from '@shopify/polaris';
 import AppDemoCard from './cards/AppDemoCard';
+import { useTranslation } from 'react-i18next';
 
 export function SupportCalloutCard() {
+  const { t } = useTranslation();
+
   return (
     <CalloutCard
-      title="Having issues?"
+      title={t('HomeLayout.SupportCalloutCard.title')}
       primaryAction={{
-        content: 'Contact us',
+        content: t('HomeLayout.SupportCalloutCard.buttonContent'),
         url: '/support',
       }}
     >
       <p>
-        We're happy to help, shoot us a message and we'll respond within 24hrs
-        :)
+        {t('HomeLayout.SupportCalloutCard.description')}
       </p>
     </CalloutCard>
   );
 }
 
 export function TutorialCalloutCard() {
+  const { t } = useTranslation();
+
   return (
     <CalloutCard
-      title="Confused where to start?"
+      title={t('HomeLayout.TutorialCalloutCard.title')}
       primaryAction={{
-        content: 'Setup guide',
+        content: t('HomeLayout.TutorialCalloutCard.buttonContent'),
         url: '/tutorial',
       }}
     >
-      <p>Check out our guide and video on how to get started.</p>
+      <p>{t('HomeLayout.TutorialCalloutCard.description')}</p>
     </CalloutCard>
   );
 }
@@ -39,12 +43,12 @@ export default function HomeLayout() {
         <Layout.Section>
           <AppDemoCard />
         </Layout.Section>
-        <Layout.Section oneHalf>
-          <SupportCalloutCard />
-        </Layout.Section>
-        <Layout.Section oneHalf>
-          <TutorialCalloutCard />
-        </Layout.Section>
+          <Layout.Section oneHalf>
+            <SupportCalloutCard />
+          </Layout.Section>
+          <Layout.Section oneHalf>
+            <TutorialCalloutCard />
+          </Layout.Section>
       </Layout>
     </>
   );
