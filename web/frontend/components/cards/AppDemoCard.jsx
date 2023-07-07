@@ -256,7 +256,7 @@ export default function AppDemoCard() {
 
   const tabContent = {
     bullet: {
-      title: 'Bullet-Style Value Propositions',
+      title: 'Bullet-style value propositions',
       specialInfo: `Supports up to 5 value propositions. Icons are optional`,
       hasBg: true,
       PreviewComponent: BulletDemo,
@@ -272,7 +272,7 @@ export default function AppDemoCard() {
       ],
     },
     icon: {
-      title: 'Icon-Style Value Propositions',
+      title: 'Icon-style value propositions',
       specialInfo: 'Supports up to 3 value propositions. Icons are optional',
       PreviewComponent: IconDemo,
       hasBg: true,
@@ -290,7 +290,7 @@ export default function AppDemoCard() {
     notification: {
       title: 'Notification-Style',
       specialInfo:
-        'Bullet-style value prop but uses one bullet and a background',
+        'Bullet-style value proposition but uses one bullet and a background',
       hasBg: false,
       PreviewComponent: NotificationDemo,
       settings: [
@@ -307,7 +307,7 @@ export default function AppDemoCard() {
     plain: {
       title: 'Value Propositions without Icons',
       specialInfo:
-        'Bullet-style value propositions without icons or background styling',
+        'A single value proposition without icons',
       hasBg: true,
       PreviewComponent: PlainDemo,
       settings: [
@@ -326,7 +326,7 @@ export default function AppDemoCard() {
     <LegacyCard title="Styling examples">
       <LegacyCard.Section>
         <p>
-          Some examples of how the value props can be styled & modified in the
+          Some examples of how Iconito can be styled & modified in the
           theme editor.
         </p>
       </LegacyCard.Section>
