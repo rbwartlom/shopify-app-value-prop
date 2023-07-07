@@ -2,20 +2,18 @@ import {Page, FooterHelp, Spinner} from '@shopify/polaris';
 
 import HomeLayout from '../components/HomeLayout';
 
-import { useEffect, useState } from 'react';
-
 export default function HomePage() {
   
   return (
     <>
       <Page
         title="Home"
-        subtitle="Easily Communicate Value Propositions to Customers"
+        subtitle="Iconex - Easily communicate value propositions using fast & fully custom icons"
         divider
       >
         <HomeLayout />
       </Page>
-      <FooterHelp>Made with 🖤, renders first</FooterHelp>
+      <FooterHelp>Made with 🖤</FooterHelp>
     </>
   );
 }
