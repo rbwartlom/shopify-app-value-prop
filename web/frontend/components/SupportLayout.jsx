@@ -97,7 +97,7 @@ export function SupportCard() {
                   value={email}
                   onChange={setEmail}
                   label={t('SupportLayout.contactForm.emailLabel')}
-                  helpText="We'll use this only to contact you about your request"
+                  helpText={t('SupportLayout.contactForm.emailHelpText')}
                 />
                 <TextField
                   type="text"

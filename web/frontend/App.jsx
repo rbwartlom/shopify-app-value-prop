@@ -19,7 +19,7 @@ export default function App() {
             <NavigationMenu
               navigationLinks={[
                 {
-                  label: t('IndexPage.Title'),
+                  label: t('IndexPage.title'),
                   destination: '/',
                 },
                 {

@@ -1,10 +1,10 @@
 {
   "NotFound": {
-    "description": "Check the URL and try again, or use the search bar to find what you need.",
+    "description": "Check the URL and try again.",
     "heading": "There is no page at this address"
   },
   "SupportPage": {
-    "title": "Contact us", 
+    "title": "Contact Iconex", 
     "subtitle": "We respond within 24hrs"
   },
   "TutorialPage": {
@@ -115,7 +115,7 @@
     "contactForm": {
       "nameLabel": "Your name",
       "emailLabel": "Your email",
-      "emailHelpText": "helpText",
+      "emailHelpText": "Your email will only be used to respond to your message.",
       "messageLabel": "Your Message",
       "submitButtonText": "Send Message"
     },

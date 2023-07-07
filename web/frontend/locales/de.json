@@ -1,38 +1,157 @@
 {
-  "HomePage": {
-    "heading": "Gute Arbeit beim Erstellen einer Shopify-App 🎉",
-    "learnMore": "Erhalte mehr Informationen zum Ausbau deiner App in <ShopifyTutorialLink>diesem Shopify-Tutorial</ShopifyTutorialLink> 📚",
-    "startPopulatingYourApp": "Bist du bereit? Stelle in deiner App einige Beispielprodukte bereit, um sie in deinem Shop anzuzeigen und zu testen.",
-    "title": "App-Name",
-    "trophyAltText": "Gute Arbeit beim Erstellen einer Shopify-App",
-    "yourAppIsReadyToExplore": "Deine App kann nun erkundet werden! Sie enthält alles, was du brauchst, um loszulegen: das <PolarisLink>Polaris Designsystem</PolarisLink>, die <AdminApiLink>Shopify Admin API</AdminApiLink> und die <AppBridgeLink>App Bridge</AppBridgeLink>-UI-Bibliothek sowie entsprechende Komponenten."
-  },
-  "NavigationMenu": {
-    "pageName": "Seitenname"
-  },
   "NotFound": {
-    "description": "Überprüfe die URL und versuche es erneut. Alternativ kannst du die Suchleiste verwenden, um zu finden, was du suchst.",
+    "description": "Überprüfen Sie die URL und versuchen Sie es erneut.",
     "heading": "Unter dieser Adresse gibt es keine Seite"
   },
-  "PageName": {
-    "body": "Nachricht",
-    "heading": "Überschrift",
-    "primaryAction": "Primäre Aktion",
-    "secondaryAction": "Sekundäre Aktion",
-    "title": "Seitenname"
+  "SupportPage": {
+    "title": "Iconex kontaktieren",
+    "subtitle": "Wir antworten innerhalb von 24 Stunden"
   },
-  "ProductsCard": {
-    "description": "Beispielprodukte werden mit einem Standardtitel und -preis erstellt. Du kannst sie jederzeit entfernen.",
-    "errorCreatingProductsToast": "Beim Erstellen von Produkten ist ein Fehler aufgetreten",
-    "populateProductsButton": {
-      "one": "{{count}} Produkt bereitstellen",
-      "other": "{{count}} Produkte bereitstellen"
+  "TutorialPage": {
+    "title": "Setup-Anleitung"
+  },
+  "IndexPage": {
+    "title": "Home",
+    "subtitle": "Iconex - Icons schnell und elegant anzeigen"
+  },
+  "HomeLayout": {
+    "SupportCalloutCard": {
+      "title": "Gibt es Probleme?",
+      "buttonContent": "Kontaktiere uns",
+      "description": "Wir helfen gerne weiter und antworten innerhalb von 24 Stunden :)"
     },
-    "productsCreatedToast": {
-      "one": "{{count}} Produkt erstellt!",
-      "other": "{{count}} Produkte erstellt!"
+    "TutorialCalloutCard": {
+      "title": "Du weißt nicht, wo du anfangen sollst?",
+      "buttonContent": "Zu unserer Setup-Anleitung",
+      "description": "In unserem Tutorial und unserem Video leiten wir dich durch den Setup-Prozess."
+    }
+  },
+  "EditorSettings": {
+    "displayAsBullets": "Als Stichpunkte anzeigen",
+    "textColor": "Textfarbe",
+    "textSize": "Textgröße",
+    "backgroundColor": "Hintergrundfarbe",
+    "backgroundCornerRadius": "Hintergrund-Eckradius",
+    "backgroundPadding": "Hintergrund-Padding",
+    "iconSize": "Icon-Größe",
+    "spaceBetween": "Raum zwischen den Elementen",
+    "iconFor": "Icon für x",
+    "textFor": "Text für x"
+  },
+  "AppDemoCard": {
+    "title": "Styling-Beispiele",
+    "description": "Einige Beispiele, wie Iconex in deinem Shop aussehen könnte",
+    "TabInfo": {
+      "backgroundToggle": "Hintergrund anzeigen",
+      "previewTitle": "Vorschau:",
+      "editorConfigTitle": "Konfigurieren Sie dann die folgenden Einstellungen:",
+      "setupGuideLinkText": "Besuchen Sie unsere vollständige Einrichtungsanleitung",
+      "themeGuideButton": {
+        "hide": "Anleitung verstecken",
+        "show": "Zum Theme hinzufügen",
+        "text": ""
+      }
     },
-    "title": "Produktzähler",
-    "totalProductsHeading": "PRODUKTE INSGESAMT"
+    "tabs": {
+      "bullet": {
+        "title": "Icon-Stichpunkte",
+        "specialInfo": "Kann maximal 5 Stichpunkte anzeigen. ",
+        "editorConfig": {
+          "displayAsBullets": "ja",
+          "textColor": "Schwarz",
+          "textSize": "1em",
+          "backgroundColor": "#97c691",
+          "backgroundCornerRadius": "10px",
+          "backgroundPadding": "1em",
+          "iconSize": "35px",
+          "spaceBetween": "0,8em"
+        }
+      },
+      "icon": {
+        "title": "Icons",
+        "specialInfo": "Kann maximal 3 Icons anzeigen.",
+        "editorConfig": {
+          "displayAsBullets": "nein",
+          "textColor": "Schwarz",
+          "textSize": "1em",
+          "backgroundColor": "#a4baef",
+          "backgroundCornerRadius": "10px",
+          "backgroundPadding": "1em",
+          "iconSize": "35px",
+          "spaceBetween": "0,8em"
+        }
+      },
+      "notification": {
+        "title": "Benachrichtigung",
+        "specialInfo": "Icon-Stichpunkt mit nur einem Stichpunkt und einem Hintergrund",
+        "editorConfig": {
+          "info": "Genau einen Featuresstext hinzufügen",
+          "displayAsBullets": "ja",
+          "textColor": "Weiss",
+          "textSize": "1em",
+          "backgroundColor": "#d10000",
+          "backgroundCornerRadius": "12px",
+          "backgroundPadding": "0,8em",
+          "iconSize": "35px"
+        }
+      },
+      "plain": {
+        "title": "Keine Symbole",
+        "specialInfo": "Ein einziges Features ohne Symbole",
+        "editorConfig": {
+          "info": "Icons-Felder leer lassen, um nur Text anzuzeigen",
+          "textColor": "Schwarz",
+          "textSize": "1em",
+          "backgroundColor": "#a9e5f5",
+          "backgroundCornerRadius": "25px",
+          "backgroundPadding": "1,4em"
+        }
+      }
+    }
+  },
+  "SupportLayout": {
+    "title": "Wir sind hier, um zu helfen",
+    "subtitle": "Gibt's Probleme?  <br> Wir antworten innerhalb von 24 Stunden",
+    "contactForm": {
+      "nameLabel": "Name",
+      "emailLabel": "E-Mail",
+      "emailHelpText": "Wir schicken keine Werbung oder Spam.",
+      "messageLabel": "Nachricht",
+      "submitButtonText": "Jetzt abschicken"
+    },
+    "formErrorBanner": {
+      "title": "Die Nachricht konnte nicht gesendet werden. Bitte senden Sie uns stattdessen eine E-Mail.",
+      "emailButtonText": "Email senden",
+      "errorMessage": "Der Server hat den folgenden Fehler zurückgegeben:"
+    }
+  },
+  "Tutorial": {
+    "InstallationGuideSection": {
+      "title": "Setup-Anleitung",
+      "step1": "Gehe im Shopify-Adminbereich zu <strong>Onlineshop > Themes</strong>.",
+      "step2": "Drücke den <strong>Anpassen</strong>-Knopf des aktiven Themes",
+      "step3": "Klicke auf  in der Seitenleiste auf <strong>Abschnitt hinzufügen</strong> oder auf im Bereich „Produktinformationen“ auf <strong>Block hinzufügen</strong>.",
+      "step4": "Wähle <strong>Features</strong> aus der Liste der Abschnitte/Blöcke.",
+      "step5": "Klicke auf den erstellten Abschnitt/Block, um die App-Einstellungen zu öffnen."
+    },
+    "VideoCard": {
+      "title": "Unsere Videoanleitung",
+      "description": "In diesem Video erfährst du, wie du diese App installieren und konfigurieren kannst",
+      "buttonText": "Video Anschauen",
+      "modalTitle": "So geht's"
+    }
+  },
+  "SettingsGuideCard": {
+    "title": "Einstellungen im Theme-Editor",
+    "displayAsBullets": "Wenn diese Option aktiviert ist, werden die Features untereinander als Stichpunkte angezeigt. ",
+    "textColor": "Ändert die Farbe des Textes der Features",
+    "textSize": "Ändert die Größe des Textes der Features",
+    "backgroundColor": "Wenn diese Option ausgewählt ist wird ein Container mit der angegebenen Hintergrundfarbe angezeigt.",
+    "backgroundCornerRadius": "Rundet die Ecken des Hintergrunds ab. ",
+    "backgroundPadding": "Wenn diese Einstellung festgelegt ist, wird ein Abstand um die Features im Hintergrundcontainer hinzugefügt",
+    "iconSize": "Ändert die Größe der Icons",
+    "spaceBetween": "Wird nur angewendet, wenn mehrere Features vorliegen. ",
+    "iconFor": "Wird nur angezeigt, wenn der dem Icon entsprechender Text eingegeben ist. ",
+    "textFor": "Bei leerem Textfeld wird der Stichpunkt nicht angezeigt."
   }
 }
