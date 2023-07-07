@@ -19,15 +19,15 @@ export default function App() {
             <NavigationMenu
               navigationLinks={[
                 {
-                  label: 'Home',
+                  label: t('IndexPage.Title'),
                   destination: '/',
                 },
                 {
-                  label: 'Contact us',
+                  label: t('SupportPage.title'),
                   destination: '/support',
                 },
                 {
-                  label: 'Setup guide',
+                  label: t('TutorialPage.title'),
                   destination: '/tutorial',
                 },
               ]}

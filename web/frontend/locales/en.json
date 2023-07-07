@@ -1,7 +1,4 @@
 {
-  "NavigationMenu": {
-    "pageName": "Page name"
-  },
   "NotFound": {
     "description": "Check the URL and try again, or use the search bar to find what you need.",
     "heading": "There is no page at this address"
