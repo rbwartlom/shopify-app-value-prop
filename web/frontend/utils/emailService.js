@@ -4,9 +4,9 @@
 
 import axios from 'axios';
 
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_DEFAULT_TEMPLATE_ID;
-const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
+const SERVICE_ID = "service_oig1sig"
+const TEMPLATE_ID = "template_xk0x49a"
+const USER_ID = "KrTrxBMEUCvuRgitJ"
 
 export const sendEmail = async ({email, name, message}) => {
   const emailjsHeaders = {
@@ -25,7 +25,7 @@ export const sendEmail = async ({email, name, message}) => {
     isError: false,
   };
   try {
-    const response = await axios.post(
+    await axios.post(
       'https://api.emailjs.com/api/v1.0/email/send',
       emailjsHeaders,
     );
