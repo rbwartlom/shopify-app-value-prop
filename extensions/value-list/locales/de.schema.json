@@ -1,7 +1,7 @@
 {
     "blocks": {
       "value-bullets": {
-        "name": "Feature Icons",
+        "png-name": "Feature Icons",
         "paragraph-1": {
           "content": "In diesen Abschnitt können 1-5 Stichpunkte mit optionalen Iconen angezeigt werden. "
         },

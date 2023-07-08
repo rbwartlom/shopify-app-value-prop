@@ -1,7 +1,8 @@
 {
   "blocks": {
     "value-bullets": {
-      "name": "Value icons",
+      "png-name": "Value icons",
+      "svg-name": "1 SVG Value icons",
         "paragraph-1": {
           "content": "Use this section to display 1-5 value propositions with optional icons. You can also add a background to this section."
         },
@@ -78,7 +79,6 @@
         "value-text-5": {
           "label": "Text for value prop 5"
         }
-      
     }
   }
 }

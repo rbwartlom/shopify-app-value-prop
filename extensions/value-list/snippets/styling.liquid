@@ -1,0 +1,72 @@
+{% comment %}
+  needs to have prop settings, block_id
+{% endcomment %}
+
+{% comment %}
+  @prettify-ignore-start
+{% endcomment %}
+{% if settings['as-bullets'] %}
+  <style>
+    /*  */
+    #{{ block_id }} .value-container {
+      display: flex;
+      align-items: center;
+    }
+    #{{ block_id }} .value-padding-between {
+      padding-top: {{ settings.value-padding-between }}em;
+    }
+    #{{ block_id }} .value-prop-text {
+      min-width: 0;
+      overflow-wrap: break-word;
+    }
+    #{{ block_id }} .value-image {
+      margin-right: 0.8em;
+    }
+  </style>
+
+{% else %}
+  <style>
+    #{{ block_id }} .value-bg-flex-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: {{ settings.value-padding-between }}em
+    }
+    #{{ block_id }} .value-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      /* related to value-bg-flex-wrapper */
+      flex: 1;
+      min-width: 0;
+    }
+    #{{ block_id }} .value-prop-text {
+      overflow-wrap: anywhere;
+      min-width: 0;
+    }
+    #{{ block_id }} .value-image {
+      margin-bottom: 0.2em;
+    }
+    #{{ block_id }} .fourfive {
+      display: none;
+    }
+  </style>
+{% endif %}
+
+<style>
+  #{{ block_id }} .background {
+    background-color: {{ settings.background-color }};
+    border-radius: {{ settings.background-corner-radius }}px;
+    padding: {{ settings.background-padding }}em;
+  }
+  #{{ block_id }} .value-prop-text {
+      color: {{ settings.value-color }};
+      font-size: {{ settings.value-text-size }}em;
+  }
+  .svg {
+    color: red!important;
+  }
+</style>
+
+{% comment %}
+  @prettify-ignore-end
+{% endcomment %}
