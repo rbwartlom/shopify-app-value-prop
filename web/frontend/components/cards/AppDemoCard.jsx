@@ -33,7 +33,7 @@ const BulletDemo = ({background}) => {
         <div className="value-bg-flex-wrapper" style={backGroundStyle}>
           <div className="value-container">
             <img
-              src="//vorkasse-test.myshopify.com/cdn/shop/files/Copy_of_LumoPlant_900_x_300_px_1.png?crop=center&height=200&v=1688479863&width=200"
+              src="../../assets/plant_demo_icon.png"
               width={35}
               height={35}
               className="value-image"
@@ -42,7 +42,7 @@ const BulletDemo = ({background}) => {
           </div>
           <div className="value-container value-padding-between">
             <img
-              src="//vorkasse-test.myshopify.com/cdn/shop/files/2279638.png?crop=center&height=200&v=1688479768&width=200"
+              src="../../assets/returns_demo_icon.png"
               width={35}
               height={35}
               className="value-image"
@@ -51,7 +51,7 @@ const BulletDemo = ({background}) => {
           </div>
           <div className="value-container value-padding-between">
             <img
-              src="//vorkasse-test.myshopify.com/cdn/shop/files/102649.png?crop=center&height=200&v=1688389064&width=200"
+              src="../../assets/secure_demo_icon.png"
               width={35}
               height={35}
               className="value-image"
@@ -85,7 +85,7 @@ const IconDemo = ({background}) => {
         <div className="background value-bg-flex-wrapper">
           <div className="value-container">
             <img
-              src="//vorkasse-test.myshopify.com/cdn/shop/files/Copy_of_LumoPlant_900_x_300_px_1.png?crop=center&height=200&v=1688479863&width=200"
+              src="../../assets/plant_demo_icon.png"
               width={35}
               height={35}
               className="value-image"
@@ -94,7 +94,7 @@ const IconDemo = ({background}) => {
           </div>
           <div className="value-container value-padding-between">
             <img
-              src="//vorkasse-test.myshopify.com/cdn/shop/files/2279638.png?crop=center&height=200&v=1688479768&width=200"
+              src="../../assets/returns_demo_icon.png"
               width={35}
               height={35}
               className="value-image"
@@ -126,7 +126,7 @@ const NotificationDemo = () => {
         <div className="background value-bg-flex-wrapper">
           <div className="value-container">
             <img
-              src="//vorkasse-test.myshopify.com/cdn/shop/files/warning-7-xxl.png?crop=center&height=200&v=1688484325&width=200"
+              src="../../assets/warning_demo_icon.png"
               width={35}
               height={35}
               className="value-image"
