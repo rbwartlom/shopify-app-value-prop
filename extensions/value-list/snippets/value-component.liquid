@@ -1,5 +1,5 @@
 {% comment %}
-  needs to have props text, icon_size, image(optional), first_block (optional, defalt functionality as false)
+  needs to have props text, icon_size, image(optional), svg_code(optional), first_block (optional, defalt functionality as false)
 {% endcomment %}
 
 {% assign padding_class = 'value-padding-between' %}
@@ -16,6 +16,10 @@
         height="{{ icon_size }}"
         class="value-image"
       >
+    {% elsif svg_code %}
+      <div class="svg container">
+        {{ svg_code }}
+      </div>
     {% endif %}
     <div class="value-prop-text">
       {{ text }}

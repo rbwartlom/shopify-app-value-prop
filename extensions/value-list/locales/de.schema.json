@@ -2,6 +2,7 @@
     "blocks": {
       "value-bullets": {
         "png-name": "Feature Icons",
+        "svg-name": "SVG Feature icons",
         "paragraph-1": {
           "content": "In diesen Abschnitt können 1-5 Stichpunkte mit optionalen Iconen angezeigt werden. "
         },
