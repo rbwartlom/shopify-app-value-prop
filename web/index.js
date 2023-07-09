@@ -6,6 +6,7 @@ import serveStatic from "serve-static";
 
 import shopify from "./shopify.js";
 import GDPRWebhookHandlers from "./gdpr.js";
+import {getAppInstalled, setAppInstalled } from "./installation-controllers.js";
 
 const PORT = parseInt(
   process.env.BACKEND_PORT || process.env.PORT || "3000",
@@ -41,6 +42,9 @@ app.use(express.json());
 
 app.use(shopify.cspHeaders());
 app.use(serveStatic(STATIC_PATH, { index: false }));
+
+app.get("/api/installation-data", getAppInstalled);
+app.post("/api/installation-data", setAppInstalled);
 
 app.use("/*", shopify.ensureInstalledOnShop(), async (_req, res, _next) => {
   return res

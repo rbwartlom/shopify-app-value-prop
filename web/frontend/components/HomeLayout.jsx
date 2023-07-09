@@ -1,9 +1,11 @@
-import {CalloutCard, Layout} from '@shopify/polaris';
+import {CalloutCard, Layout, Banner} from '@shopify/polaris';
 import AppDemoCard from './cards/AppDemoCard';
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
+import {useAuthenticatedFetch} from '../hooks';
+import {useEffect, useState} from 'react';
 
 export function SupportCalloutCard() {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   return (
     <CalloutCard
@@ -13,15 +15,13 @@ export function SupportCalloutCard() {
         url: '/support',
       }}
     >
-      <p>
-        {t('HomeLayout.SupportCalloutCard.description')}
-      </p>
+      <p>{t('HomeLayout.SupportCalloutCard.description')}</p>
     </CalloutCard>
   );
 }
 
 export function TutorialCalloutCard() {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   return (
     <CalloutCard
@@ -36,19 +36,73 @@ export function TutorialCalloutCard() {
   );
 }
 
+export function ConditionalSetupBannerSection() {
+  const fetch = useAuthenticatedFetch();
+
+  const [showNotification, setShowNotification] = useState(false);
+
+  useEffect(() => {
+    fetch('/api/installation-data', {
+      method: 'GET',
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        if (response.appInstalled === false) {
+          setShowNotification(true);
+        }
+      });
+  }, []);
+
+  const handleDontShowAgain = () => {
+    fetch('/api/installation-data', {
+      method: 'POST',
+      body: JSON.stringify({value: true}),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    //does not handle errors since it would introduce mroe complexity
+    setShowNotification(false);
+  };
+
+  return (
+    showNotification && (
+      <Layout.Section>
+        <Banner
+          status="info"
+          title="Learn how to set up this app"
+          action={{content: 'Visit the setup guide', url: '/tutorial'}}
+          secondaryAction={{
+            content: "Don't show this again",
+            onAction: handleDontShowAgain,
+          }}
+          onDismiss={() => setShowNotification(false)}
+        >
+          <p>
+            We've prepared a step-by-step guide to help you set up icons and
+            value propositions in your theme. You can find it in the{' '}
+            <a href="/tutorial">tutorial section</a> of this app.
+          </p>
+        </Banner>
+      </Layout.Section>
+    )
+  );
+}
+
 export default function HomeLayout() {
   return (
     <>
       <Layout>
+        <ConditionalSetupBannerSection />
         <Layout.Section>
           <AppDemoCard />
         </Layout.Section>
-          <Layout.Section oneHalf>
-            <SupportCalloutCard />
-          </Layout.Section>
-          <Layout.Section oneHalf>
-            <TutorialCalloutCard />
-          </Layout.Section>
+        <Layout.Section oneHalf>
+          <SupportCalloutCard />
+        </Layout.Section>
+        <Layout.Section oneHalf>
+          <TutorialCalloutCard />
+        </Layout.Section>
       </Layout>
     </>
   );
