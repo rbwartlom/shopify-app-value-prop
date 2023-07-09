@@ -33,6 +33,7 @@ export default function App() {
               ]}
             />
             <Routes pages={pages} />
+            <div style={{paddingBottom: "50px"}} />
           </QueryProvider>
         </AppBridgeProvider>
       </BrowserRouter>
