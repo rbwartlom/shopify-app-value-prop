@@ -1,6 +1,6 @@
-import {CalloutCard, Layout, Banner} from '@shopify/polaris';
+import {CalloutCard, Layout, Banner, Link} from '@shopify/polaris';
 import AppDemoCard from './cards/AppDemoCard';
-import {useTranslation} from 'react-i18next';
+import {Trans, useTranslation} from 'react-i18next';
 import {useAuthenticatedFetch} from '../hooks';
 import {useEffect, useState} from 'react';
 
@@ -37,6 +37,7 @@ export function TutorialCalloutCard() {
 }
 
 export function ConditionalSetupBannerSection() {
+  const {t} = useTranslation();
   const fetch = useAuthenticatedFetch();
 
   const [showNotification, setShowNotification] = useState(false);
@@ -70,18 +71,18 @@ export function ConditionalSetupBannerSection() {
       <Layout.Section>
         <Banner
           status="info"
-          title="Learn how to set up this app"
-          action={{content: 'Visit the setup guide', url: '/tutorial'}}
+          title={t('Tutorial.ConditionalSetupBannerSection.title')}
+          action={{content: t('Tutorial.ConditionalSetupBannerSection.primaryButtonText'), url: '/tutorial'}}
           secondaryAction={{
-            content: "Don't show this again",
+            content: t('Tutorial.ConditionalSetupBannerSection.secondaryButtonText'),
             onAction: handleDontShowAgain,
           }}
           onDismiss={() => setShowNotification(false)}
         >
           <p>
-            We've prepared a step-by-step guide to help you set up icons and
-            value propositions in your theme. You can find it in the{' '}
-            <a href="/tutorial">tutorial section</a> of this app.
+            <Trans i18nKey="Tutorial.ConditionalSetupBannerSection.description">
+            {t('Tutorial.ConditionalSetupBannerSection.description')}
+            </Trans>
           </p>
         </Banner>
       </Layout.Section>

@@ -139,6 +139,12 @@
       "description": "In diesem Video erfährst du, wie du diese App installieren und konfigurieren kannst",
       "buttonText": "Video Anschauen",
       "modalTitle": "So geht's"
+    },
+    "ConditionalSetupBannerSection": {
+      "title": "Lerne, wie du die App konfigurierst",
+      "description": "Wir haben eine Schritt-für-Schritt-Anleitung vorbereiten. <br /> Du findest sie auf der \"Setup-Anleitung\"-Seite",
+      "primaryButtonText": "Zur Setup-Anleitung",
+      "secondaryButtonText": "Nicht mehr anzeigen"
     }
   },
   "SettingsGuideCard": {
