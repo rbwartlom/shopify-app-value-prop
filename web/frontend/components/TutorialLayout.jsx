@@ -101,7 +101,7 @@ export function SettingsGuideCard() {
               alt=""
               width="100%"
               height="100%"
-              src="https://cdn.shopify.com/s/files/1/0714/9666/3337/files/Settings_1.png"
+              src="../../assets/Settings_1.webp"
               style={{
                 borderRight: '1px solid #000',
               }}
