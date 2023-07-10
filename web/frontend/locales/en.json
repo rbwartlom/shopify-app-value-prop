@@ -55,7 +55,7 @@
     "tabs": {
       "bullet": {
         "title": "Icon bullets",
-        "specialInfo": "Supports up to 5 value propositions. Icons are optional",
+        "specialInfo": "Supports up to 5 value propositions. To not display an element, leave all fields empty.",
         "editorConfig": {
           "displayAsBullets": "checked",
           "textColor": "Black",
@@ -69,7 +69,7 @@
       },
       "icon": {
         "title": "Icons",
-        "specialInfo": "Supports up to 3 value propositions. Icons are optional",
+        "specialInfo": "Supports up to 5 value propositions. To not display an element, leave all fields empty.",
         "editorConfig": {
           "displayAsBullets": "unchecked",
           "textColor": "Black",

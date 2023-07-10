@@ -55,7 +55,7 @@
     "tabs": {
       "bullet": {
         "title": "Icon-Stichpunkte",
-        "specialInfo": "Kann maximal 5 Stichpunkte anzeigen. ",
+        "specialInfo": "Kann maximal 5 Stichpunkte anzeigen. Um einen Stichpunkt nicht anzuzeigen einfach alle Felder leer lassen.",
         "editorConfig": {
           "displayAsBullets": "ja",
           "textColor": "Schwarz",
@@ -69,7 +69,7 @@
       },
       "icon": {
         "title": "Icons",
-        "specialInfo": "Kann maximal 3 Icons anzeigen.",
+        "specialInfo": "Kann maximal 5 Icons anzeigen. Um ein Icon nicht anzuzeigen einfach alle Felder leer lassen.",
         "editorConfig": {
           "displayAsBullets": "nein",
           "textColor": "Schwarz",
