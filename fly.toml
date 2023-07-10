@@ -7,13 +7,17 @@ primary_region = "ams"
 processes = []
 
 [env]
+  PORT = "8080"
+  SHOPIFY_API_KEY="222b8cbd168ae11aa32789cec9b1090c"
+  HOST="https://iconaro.fly.dev"
+  SCOPES="read_metaobjects"
 
 [experimental]
   auto_rollback = true
 
 [[services]]
   http_checks = []
-  internal_port = 8081
+  internal_port = 8080
   processes = ["app"]
   protocol = "tcp"
   script_checks = []
