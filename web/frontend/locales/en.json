@@ -145,6 +145,12 @@
       "description": "We've prepared a step-by-step guide to help you set up icons and value propositions in your theme. <br /> You can find it in the \"Setup Guide\" section of this app.",
       "primaryButtonText": "Visit the setup guide",
       "secondaryButtonText": "Don't show this again"
+    },
+    "FindIconsCard": {
+      "title": "Where to find free Icons",
+      "description": "These are some sites that offer free Icons with no copyright restrictions. <br /> We decided to not include a custom icon library in this app since we're sure you know what icons you need better than we do.",
+      "svgIconsTitle": "SVG Icons (Recommended)",
+      "pngIconsTitle": "PNG Icons"
     }
   },
   "SettingsGuideCard": {
@@ -157,7 +163,7 @@
     "backgroundPadding": "When set, adds padding around the value propositions inside the background container",
     "iconSize": "Changes the size of the icons",
     "spaceBetween": "Is only applied when there are multiple value propositions. When 'Display as bullets' is checked, this will be the space added between bullets. Otherwise, this will add space between the value propositions in the row.",
-    "iconFor": "Only displayed if corresponding text is set. For best results, upload transparent PNG files.",
+    "iconFor": "SVG icons are recommended since they load faster and have better quality. For best results with images, upload transparent PNG files.",
     "textFor": "To not display a value proposition, leave the text field empty."
   }
 }

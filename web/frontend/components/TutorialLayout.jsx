@@ -6,6 +6,9 @@ import {
   DescriptionList,
   HorizontalGrid,
   Divider,
+  Text,
+  Box,
+  Link,
 } from '@shopify/polaris';
 import {useState} from 'react';
 
@@ -37,11 +40,79 @@ export function InstallationGuideSection() {
             {t('Tutorial.InstallationGuideSection.step4')}
           </Trans>
         </List.Item>
-        <List.Item>
-          {t('Tutorial.InstallationGuideSection.step5')}
-        </List.Item>
+        <List.Item>{t('Tutorial.InstallationGuideSection.step5')}</List.Item>
       </List>
     </LegacyCard.Section>
+  );
+}
+
+export function FindIconsCard() {
+  const {t} = useTranslation();
+
+  return (
+    <LegacyCard title={t('Tutorial.FindIconsCard.title')}>
+      <LegacyCard.Section>
+        <p>
+          <Trans i18nKey="Tutorial.FindIconsCard.description">
+            {t('Tutorial.FindIconsCard.description')}
+          </Trans>
+        </p>
+      </LegacyCard.Section>
+      <Divider />
+      <HorizontalGrid columns={['oneThird', 'twoThirds']} gap="3">
+      <Box padding="6">
+        <Box paddingBlockEnd="1">
+          <Text variant="headingSm" as="h3">
+            {t('Tutorial.FindIconsCard.svgIconsTitle')}
+          </Text>
+          </Box>
+          <List>
+            <List.Item>
+              <Link url="https://www.reshot.com/" target="_blank">
+                Reshot
+              </Link>
+            </List.Item>
+            <List.Item>
+              <Link url="https://www.svgrepo.com/" target="_blank">
+                SVG Repo
+              </Link>
+            </List.Item>
+            <List.Item>
+              <Link url="https://icomoon.io/" target="_blank">
+                Icomoon
+              </Link>
+            </List.Item>
+          </List>
+        </Box>
+        <Box padding="6">
+        <Box paddingBlockEnd="1">
+          <Text variant="headingSm" as="h3">
+            {t('Tutorial.FindIconsCard.pngIconsTitle')}
+          </Text>
+          </Box>
+          <List>
+            <List.Item>
+              <Link url="https://iconmonstr.com/" target="_blank">
+                Iconmonstr
+              </Link>
+            </List.Item>
+            <List.Item>
+              <Link url="https://www.iconpacks.net/" target="_blank">
+                Iconpacks
+              </Link>
+            </List.Item>
+            <List.Item>
+              <Link url="https://uxwing.com/" target="_blank">
+                Uxwing
+              </Link>
+            </List.Item>
+            <List.Item>
+              Or create your own icons (e.g. in Canva)
+            </List.Item>
+          </List>
+        </Box>
+      </HorizontalGrid>
+    </LegacyCard>
   );
 }
 
@@ -147,17 +218,6 @@ export function VideoModalCard() {
     );
   };
 
-  /*
-    static content should be replaces from i18next react:
-    "VideoCard": {
-      "title": "Watch the video guide",
-      "description": "This video will walk you through how to install and configure this app",
-      "buttonText": "Watch video",
-      "modalTitle": "How to install and configure this app"
-    }
-    
-    */
-
   return (
     <>
       <MediaCard
@@ -187,6 +247,7 @@ export default function TutorialLayout() {
   return (
     <>
       <VideoModalCard />
+      <FindIconsCard />
       <LegacyCard title={t('Tutorial.InstallationGuideSection.title')}>
         <InstallationGuideSection />
       </LegacyCard>

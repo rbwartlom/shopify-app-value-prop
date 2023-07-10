@@ -145,6 +145,13 @@
       "description": "Wir haben eine Schritt-für-Schritt-Anleitung vorbereiten. <br /> Du findest sie auf der \"Setup-Anleitung\"-Seite",
       "primaryButtonText": "Zur Setup-Anleitung",
       "secondaryButtonText": "Nicht mehr anzeigen"
+    },
+    "FindIconsCard": {
+      "title": "Ressourcen mit kostenlosen Icons",
+      "description": "These are some sites that offer free Icons with no copyright. <br /> We decided to not include a custom icon library in this app since we're sure you know what icons fit you better than we do.",
+      "description_in_german": "Hier sind einige Websites, die kostenlose Icons anbieten. <br /> Wir haben uns entschieden, keine eigene Icon-Bibliothek in diese App aufzubauen, da wir sicher sind, dass Shopbetreiber besser wissen, welche Icons sie brauchen als wir.",
+      "svgIconsTitle": "SVG Icons (Empfohlen)",
+      "pngIconsTitle": "PNG Icons"
     }
   },
   "SettingsGuideCard": {
