@@ -10,38 +10,16 @@
 {% endcomment %}
 <div id="{{ block_id }}">
   <div class="background value-bg-flex-wrapper">
-    {% render 'value-component',
-      text: block.settings['value-text-1'],
-      image: block.settings['value-image-1'],
-      icon_size: icon_size,
-      first_block: true
-    %}
+    {% liquid
+      render 'value-component', text: block.settings['value-text-1'], image: block.settings['value-image-1'], icon_size: icon_size, first_block: true
 
-    {%
-      render 'value-component'
-      , text: block.settings.['value-text-2'],
-      image: block.settings.['value-image-2'],
-      icon_size: icon_size,
-    %}
+      render 'value-component', text: block.settings['value-text-2'], image: block.settings['value-image-2'], icon_size: icon_size
 
-    {%
-      render 'value-component'
-      , text: block.settings.['value-text-3'],
-      image: block.settings.['value-image-3'],
-      icon_size: icon_size,
-    %}
+      render 'value-component', text: block.settings['value-text-3'], image: block.settings['value-image-3'], icon_size: icon_size
 
-    {%
-      render 'value-component'
-      , text: block.settings.['value-text-4'],
-      image: block.settings.['value-image-4'],
-      icon_size: icon_size,
-    %}
+      render 'value-component', text: block.settings['value-text-4'], image: block.settings['value-image-4'], icon_size: icon_size
 
-    {% render 'value-component',
-      text: block.settings['value-text-5'],
-      image: block.settings['value-image-5'],
-      icon_size: icon_size
+      render 'value-component', text: block.settings['value-text-5'], image: block.settings['value-image-5'], icon_size: icon_size
     %}
   </div>
 </div>

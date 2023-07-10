@@ -6,34 +6,16 @@
 
 <div id="{{ block_id }}">
   <div class="background value-bg-flex-wrapper">
-    {% render 'value-component',
-      text: block.settings['value-text-1'],
-      svg_code: block.settings['value-svg-1'],
-      first_block: true
-    %}
+    {% liquid
+      render 'value-component', text: block.settings['value-text-1'], svg_code: block.settings['value-svg-1'], first_block: true
 
-    {%
-      render 'value-component'
-      , text: block.settings.['value-text-2'],
-      svg_code: block.settings.['value-svg-2'],
-    %}
+      render 'value-component', text: block.settings['value-text-2'], svg_code: block.settings['value-svg-2']
 
-    {%
-      render 'value-component'
-      , text: block.settings.['value-text-3'],
-      svg_code: block.settings.['value-svg-3'],
-    %}
+      render 'value-component', text: block.settings['value-text-3'], svg_code: block.settings['value-svg-3']
 
-    {%
-      render 'value-component'
-      , text: block.settings.['value-text-4'],
-      svg_code: block.settings.['value-svg-4'],
-    %}
+      render 'value-component', text: block.settings['value-text-4'], svg_code: block.settings['value-svg-4']
 
-    {%
-      render 'value-component',
-      text: block.settings['value-text-5'],
-      svg_code: block.settings['value-svg-5'],
+      render 'value-component', text: block.settings['value-text-5'], svg_code: block.settings['value-svg-5']
     %}
   </div>
 </div>
