@@ -5,6 +5,7 @@
 {% comment %}
   @prettify-ignore-start
 {% endcomment %}
+{%- assign icon_size = block.settings['icon-size'] %}
 {% if settings['as-bullets'] %}
   <style>
     /*  */
@@ -62,8 +63,14 @@
       color: {{ settings.value-color }};
       font-size: {{ settings.value-text-size }}em;
   }
-  .svg {
-    color: red!important;
+  #{{ block_id }} svg {
+    height: {{icon_size}}px;
+    width: {{icon_size}}px;
+  }
+  #{{ block_id }} .svg-wrapper {
+    height: {{icon_size}}px;
+    width: {{icon_size}}px;
+    margin-right: 9px;
   }
 </style>
 

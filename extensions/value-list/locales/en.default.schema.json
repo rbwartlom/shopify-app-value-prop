@@ -2,7 +2,7 @@
   "blocks": {
     "value-bullets": {
       "png-name": "Value icons",
-      "svg-name": "1 SVG Value icons",
+      "svg-name": "SVG Value icons",
         "paragraph-1": {
           "content": "Use this section to display 1-5 value propositions with optional icons. You can also add a background to this section."
         },
@@ -31,7 +31,7 @@
         },
         "header-2": {
           "content": "Add value propositions",
-          "info": "To not display a value prop, leave the text field blank. Icons are optional."
+          "info": "Blank fields are not displayed."
         },
         "icon-size": {
           "label": "Icon size"
@@ -44,7 +44,8 @@
           "content": "Value prop 1"
         },
         "value-image-1": {
-          "label": "Icon for value prop 1"
+          "label": "Icon for value prop 1",
+          "svg-label": "SVG code for value prop 1"
         },
         "value-text-1": {
           "label": "Text for value prop 1"
@@ -53,7 +54,8 @@
           "content": "Value prop 2"
         },
         "value-image-2": {
-          "label": "Icon for value prop 2"
+          "label": "Icon for value prop 2",
+          "svg-label": "SVG code for value prop 2"
         },
         "value-text-2": {
           "label": "Text for value prop 2"
@@ -62,19 +64,22 @@
           "content": "Value prop 3"
         },
         "value-image-3": {
-          "label": "Icon for value prop 3"
+          "label": "Icon for value prop 3",
+          "svg-label": "SVG code for value prop 3"
         },
         "value-text-3": {
           "label": "Text for value prop 3"
         },
         "value-image-4": {
-          "label": "Icon for value prop 4 "
+          "label": "Icon for value prop 4 ",
+          "svg-label": "SVG code for value prop 4"
         },
         "value-text-4": {
           "label": "Text for value prop 4"
         },
         "value-image-5": {
-          "label": "Icon for value prop 5"
+          "label": "Icon for value prop 5",
+          "svg-label": "SVG code for value prop 5"
         },
         "value-text-5": {
           "label": "Text for value prop 5"

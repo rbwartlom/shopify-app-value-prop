@@ -1,0 +1,194 @@
+{% assign block_id = 'css-block-' | append: block.id %}
+
+{% render 'styling', block_id: block_id, settings: block.settings %}
+
+<div id="{{ block_id }}">
+  <div class="background value-bg-flex-wrapper">
+    {% render 'value-component',
+      text: block.settings['value-text-1'],
+      svg_code: block.settings['value-svg-1'],
+      first_block: true
+    %}
+
+    {%
+      render 'value-component'
+      , text: block.settings.['value-text-2'],
+      svg_code: block.settings.['value-svg-2'],
+    %}
+
+    {%
+      render 'value-component'
+      , text: block.settings.['value-text-3'],
+      svg_code: block.settings.['value-svg-3'],
+    %}
+
+    {%
+      render 'value-component'
+      , text: block.settings.['value-text-4'],
+      svg_code: block.settings.['value-svg-4'],
+    %}
+
+    {%
+      render 'value-component',
+      text: block.settings['value-text-5'],
+      svg_code: block.settings['value-svg-5'],
+    %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.value-bullets.svg-name",
+  "target": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:blocks.value-bullets.paragraph-1.content"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.value-bullets.header-1.content",
+      "info": "t:blocks.value-bullets.header-1.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "as-bullets",
+      "label": "t:blocks.value-bullets.as-bullets.label",
+      "info": "t:blocks.value-bullets.as-bullets.info",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "value-color",
+      "label": "t:blocks.value-bullets.value-color.label",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "value-text-size",
+      "label": "t:blocks.value-bullets.value-text-size.label",
+      "min": 0.2,
+      "max": 3,
+      "step": 0.2,
+      "default": 1,
+      "unit": "em"
+    },
+    {
+      "type": "color",
+      "id": "background-color",
+      "label": "t:blocks.value-bullets.background-color.label"
+    },
+    {
+      "type": "range",
+      "id": "background-corner-radius",
+      "label": "t:blocks.value-bullets.background-corner-radius.label",
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "default": 10,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "background-padding",
+      "label": "t:blocks.value-bullets.background-padding.label",
+      "min": 0,
+      "max": 2,
+      "step": 0.2,
+      "default": 0,
+      "unit": "em"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.value-bullets.header-2.content",
+      "info": "t:blocks.value-bullets.header-2.info"
+    },
+    {
+      "type": "range",
+      "id": "icon-size",
+      "label": "t:blocks.value-bullets.icon-size.label",
+      "min": 5,
+      "max": 110,
+      "step": 5,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "value-padding-between",
+      "label": "t:blocks.value-bullets.value-padding-between.label",
+      "info": "t:blocks.value-bullets.value-padding-between.info",
+      "min": 0,
+      "max": 2,
+      "step": 0.2,
+      "default": 1,
+      "unit": "em"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.value-bullets.value-header-1.content"
+    },
+    {
+      "type": "html",
+      "id": "value-svg-1",
+      "label": "t:blocks.value-bullets.value-image-1.svg-label"
+    },
+    {
+      "type": "text",
+      "id": "value-text-1",
+      "label": "t:blocks.value-bullets.value-text-1.label",
+      "default": "Text 1"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.value-bullets.value-header-2.content"
+    },
+    {
+      "type": "html",
+      "id": "value-svg-2",
+      "label": "t:blocks.value-bullets.value-image-2.svg-label"
+    },
+    {
+      "type": "text",
+      "id": "value-text-2",
+      "label": "t:blocks.value-bullets.value-text-2.label",
+      "default": "Text 2"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.value-bullets.value-header-3.content"
+    },
+    {
+      "type": "html",
+      "id": "value-svg-3",
+      "label": "t:blocks.value-bullets.value-image-3.svg-label"
+    },
+    {
+      "type": "text",
+      "id": "value-text-3",
+      "label": "t:blocks.value-bullets.value-text-3.label",
+      "default": "Text 3"
+    },
+    {
+      "type": "html",
+      "id": "value-svg-4",
+      "label": "t:blocks.value-bullets.value-image-4.svg-label"
+    },
+    {
+      "type": "text",
+      "id": "value-text-4",
+      "label": "t:blocks.value-bullets.value-text-4.label"
+    },
+    {
+      "type": "html",
+      "id": "value-svg-5",
+      "label": "t:blocks.value-bullets.value-image-5.svg-label"
+    },
+    {
+      "type": "text",
+      "id": "value-text-5",
+      "label": "t:blocks.value-bullets.value-text-5.label"
+    }
+  ]
+}
+{% endschema %}

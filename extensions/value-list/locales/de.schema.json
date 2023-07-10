@@ -1,7 +1,8 @@
 {
     "blocks": {
       "value-bullets": {
-        "png-name": "Feature Icons",
+        "png-name": "PNG Icons",
+        "svg-name": "SVG icons",
         "paragraph-1": {
           "content": "In diesen Abschnitt können 1-5 Stichpunkte mit optionalen Iconen angezeigt werden. "
         },
@@ -30,7 +31,7 @@
         },
         "header-2": {
           "content": "Features und Icons hinzufügen",
-          "info": "Bei einem leeren Textfeld wird der Inhalt nicht angezeigt "
+          "info": "Leere Felder werden nicht angezeigt"
         },
         "icon-size": {
           "label": "Icon-Größe"
@@ -40,40 +41,45 @@
           "info": "Gilt nur, wenn mehr als ein Wert eingegeben wurde."
         },
         "value-header-1": {
-          "content": "Text 1"
+          "content": "Punkt 1"
         },
         "value-image-1": {
-          "label": "Icon zu Text 1"
+          "label": "Icon 1",
+          "svg-label": "SVG-Code für Icon 1"
         },
         "value-text-1": {
           "label": "Text 1"
         },
         "value-header-2": {
-          "content": "Text 2"
+          "content": "Punkt 2"
         },
         "value-image-2": {
-          "label": "Icon zu Text 2"
+          "label": "Icon 2",
+          "svg-label": "SVG-Code für Icon 2"
         },
         "value-text-2": {
           "label": "Text 2"
         },
         "value-header-3": {
-          "content": "Text 3"
+          "content": "Punkt 3"
         },
         "value-image-3": {
-          "label": "Icon zu Text 3"
+          "label": "Icon 3",
+          "svg-label": "SVG-Code für Icon 3"
         },
         "value-text-3": {
-          "label": "Text für Wertstütze 3"
+          "label": "Text 3"
         },
         "value-image-4": {
-          "label": "Icon zu Text 4 "
+          "label": "Icon 4 ",
+          "svg-label": "SVG-Code für Icon 4"
         },
         "value-text-4": {
-          "label": "Text für Wertstütze 4"
+          "label": "Text 4"
         },
         "value-image-5": {
-          "label": "Icon 5"
+          "label": "Icon 5",
+          "svg-label": "SVG-Code für Icon 5"
         },
         "value-text-5": {
           "label": "Text 5"
