@@ -9,6 +9,7 @@ import {
   Text,
   Box,
   Link,
+  VideoThumbnail,
 } from '@shopify/polaris';
 import {useState} from 'react';
 
@@ -60,11 +61,11 @@ export function FindIconsCard() {
       </LegacyCard.Section>
       <Divider />
       <HorizontalGrid columns={['oneThird', 'twoThirds']} gap="3">
-      <Box padding="6">
-        <Box paddingBlockEnd="1">
-          <Text variant="headingSm" as="h3">
-            {t('Tutorial.FindIconsCard.svgIconsTitle')}
-          </Text>
+        <Box padding="6">
+          <Box paddingBlockEnd="1">
+            <Text variant="headingSm" as="h3">
+              {t('Tutorial.FindIconsCard.svgIconsTitle')}
+            </Text>
           </Box>
           <List>
             <List.Item>
@@ -85,10 +86,10 @@ export function FindIconsCard() {
           </List>
         </Box>
         <Box padding="6">
-        <Box paddingBlockEnd="1">
-          <Text variant="headingSm" as="h3">
-            {t('Tutorial.FindIconsCard.pngIconsTitle')}
-          </Text>
+          <Box paddingBlockEnd="1">
+            <Text variant="headingSm" as="h3">
+              {t('Tutorial.FindIconsCard.pngIconsTitle')}
+            </Text>
           </Box>
           <List>
             <List.Item>
@@ -106,9 +107,7 @@ export function FindIconsCard() {
                 Uxwing
               </Link>
             </List.Item>
-            <List.Item>
-              Or create your own icons (e.g. in Canva)
-            </List.Item>
+            <List.Item>Or create your own icons (e.g. in Canva)</List.Item>
           </List>
         </Box>
       </HorizontalGrid>
@@ -201,7 +200,7 @@ export function VideoModalCard() {
         }}
       >
         <iframe
-          src="https://www.loom.com/embed"
+          src="https://www.loom.com/embed/a63d58fb77194a6994f1b3345739a33c?sid=905de505-26b9-49e3-8b1b-e096c1973fcb"
           frameBorder={0}
           webkitallowfullscreen=""
           mozallowfullscreen=""
@@ -227,7 +226,14 @@ export function VideoModalCard() {
           content: t('Tutorial.VideoCard.buttonText'),
           onAction: () => setShowVideo(true),
         }}
-      />
+      >
+        <VideoThumbnail
+          thumbnailUrl="https://cdn.loom.com/sessions/thumbnails/a63d58fb77194a6994f1b3345739a33c-1689001865883-with-play.gif"
+          videoLength={644}
+          onClick={() => setShowVideo(true)}
+        />
+      </MediaCard>
+
       <Modal
         title={t('Tutorial.VideoCard.modalTitle')}
         open={showVideo}
