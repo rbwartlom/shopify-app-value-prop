@@ -1,9 +1,9 @@
-{% liquid 
+{% liquid
   assign block_id = 'css-block-' | append: block.id
   assign icon_size = block.settings['icon-size']
-%}
 
-{% render 'styling', block_id: block_id, settings: block.settings %}
+  render 'styling', block_id: block_id, settings: block.settings
+%}
 
 {% comment %}
   programming in a for loop would be a paid due to poorly structured data from schema tags

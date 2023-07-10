@@ -1,6 +1,8 @@
-{% assign block_id = 'css-block-' | append: block.id %}
+{% liquid
+  assign block_id = 'css-block-' | append: block.id
 
-{% render 'styling', block_id: block_id, settings: block.settings %}
+  render 'styling', block_id: block_id, settings: block.settings
+%}
 
 <div id="{{ block_id }}">
   <div class="background value-bg-flex-wrapper">
