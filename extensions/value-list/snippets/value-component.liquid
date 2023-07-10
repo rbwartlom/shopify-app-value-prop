@@ -2,27 +2,31 @@
   needs to have props text, icon_size, image(optional), svg_code (optional), first_block (optional, defalt functionality as false)
 {% endcomment %}
 
-{% assign padding_class = 'value-padding-between' %}
-{% if first_block == true %}
-  {% assign padding_class = '' %}
-{% endif %}
+{% liquid
+  assign padding_class = 'value-padding-between'
+  if first_block == true
+    assign padding_class = ''
+  endif
 
-{% unless svg_code %}
-  {% assign svg_code = empty %}
-{% endunless %}
-{% unless image %}
-  {% assign image = null %}
-{% endunless %}
+  unless svg_code
+    assign svg_code = empty
+  endunless
+
+  unless image
+    assign image = null
+  endunless
+%}
 
 {% unless text == empty and image == null and svg_code == empty %}
   <div class="value-container {{ padding_class }}">
     {% if image %}
       <img
-        src="{{ image |  image_url: width: '150', height: '150' }}"
+        src="{{ image | image_url: width: '150', height: '150' }}"
         width="{{ icon_size }}"
         height="{{ icon_size }}"
         class="value-image"
         alt="{{ image.alt }}"
+        loading="lazy"
       >
     {% else %}
       {% unless svg_code == empty %}
