@@ -8,7 +8,7 @@ processes = []
 
 [env]
   PORT = "8080"
-  SHOPIFY_API_KEY="222b8cbd168ae11aa32789cec9b1090c"
+  SHOPIFY_API_KEY="23e2c3c09f39dc3dda4c2058cd16711e"
   HOST="https://iconaro.fly.dev"
   SCOPES="read_metaobjects"
 
