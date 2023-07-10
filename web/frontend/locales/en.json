@@ -8,7 +8,7 @@
     "subtitle": "We respond within 24hrs"
   },
   "TutorialPage": {
-    "title": "Setup Guide"
+    "title": "Setup guide"
   },
   "IndexPage": {
     "title": "Home",
@@ -142,7 +142,7 @@
     },
     "ConditionalSetupBannerSection": {
       "title": "Learn how to set up this app",
-      "description": "We've prepared a step-by-step guide to help you set up icons and value propositions in your theme. <br /> You can find it in the \"Setup Guide\" section of this app.",
+      "description": "We've prepared a step-by-step guide to help you set up icons and value propositions in your theme. <br /> You can find it in the \"Setup guide\" section of this app.",
       "primaryButtonText": "Visit the setup guide",
       "secondaryButtonText": "Don't show this again"
     },

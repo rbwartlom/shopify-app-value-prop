@@ -7,23 +7,34 @@
   {% assign padding_class = '' %}
 {% endif %}
 
-<div class="value-container {{ padding_class }}">
-  {% if image %}
-    <img
-      src="{{ image |  image_url: width: '150', height: '150' }}"
-      width="{{ icon_size }}"
-      height="{{ icon_size }}"
-      class="value-image"
-      alt="{{ image.alt }}"
-    >
-  {% elsif svg_code %}
-    <div class="svg-wrapper">
-      {{ svg_code }}
-    </div>
-  {% endif %}
-  {% unless text == empty %}
-    <div class="value-prop-text">
-      {{ text }}
-    </div>
-  {% endunless %}
-</div>
+{% unless svg_code %}
+  {% assign svg_code = empty %}
+{% endunless %}
+{% unless image %}
+  {% assign image = null %}
+{% endunless %}
+
+{% unless text == empty and image == null and svg_code == empty %}
+  <div class="value-container {{ padding_class }}">
+    {% if image %}
+      <img
+        src="{{ image |  image_url: width: '150', height: '150' }}"
+        width="{{ icon_size }}"
+        height="{{ icon_size }}"
+        class="value-image"
+        alt="{{ image.alt }}"
+      >
+    {% else %}
+      {% unless svg_code == empty %}
+        <div class="svg-wrapper">
+          {{ svg_code }}
+        </div>
+      {% endunless %}
+    {% endif %}
+    {% unless text == empty %}
+      <div class="value-prop-text">
+        {{ text }}
+      </div>
+    {% endunless %}
+  </div>
+{% endunless %}
