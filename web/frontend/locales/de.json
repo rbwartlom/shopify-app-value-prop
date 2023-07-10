@@ -4,7 +4,7 @@
     "heading": "Unter dieser Adresse gibt es keine Seite"
   },
   "SupportPage": {
-    "title": "Iconex kontaktieren",
+    "title": "Iconaro kontaktieren",
     "subtitle": "Wir antworten innerhalb von 24 Stunden"
   },
   "TutorialPage": {
@@ -12,7 +12,7 @@
   },
   "IndexPage": {
     "title": "Home",
-    "subtitle": "Iconex - Icons schnell und elegant anzeigen"
+    "subtitle": "Iconaro - Icons schnell und elegant anzeigen"
   },
   "HomeLayout": {
     "SupportCalloutCard": {
@@ -40,7 +40,7 @@
   },
   "AppDemoCard": {
     "title": "Styling-Beispiele",
-    "description": "Einige Beispiele, wie Iconex in deinem Shop aussehen könnte",
+    "description": "Einige Beispiele, wie Iconaro in deinem Shop aussehen könnte",
     "TabInfo": {
       "backgroundToggle": "Hintergrund anzeigen",
       "previewTitle": "Vorschau:",

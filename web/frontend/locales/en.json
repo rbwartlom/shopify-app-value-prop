@@ -4,7 +4,7 @@
     "heading": "There is no page at this address"
   },
   "SupportPage": {
-    "title": "Contact Iconex", 
+    "title": "Contact Iconaro", 
     "subtitle": "We respond within 24hrs"
   },
   "TutorialPage": {
@@ -12,13 +12,13 @@
   },
   "IndexPage": {
     "title": "Home",
-    "subtitle": "Iconex - Easily communicate value propositions using fast & fully custom icons"
+    "subtitle": "Iconaro - Easily communicate value propositions using fast & fully custom icons"
   },
   "HomeLayout": {
     "SupportCalloutCard": {
       "title": "Having problems?",
       "buttonContent": "Contact us",
-      "description": "Iconex is happy to help, shoot us a message and we'll respond within 24hrs:)"
+      "description": "Iconaro is happy to help, shoot us a message and we'll respond within 24hrs :)"
     },
     "TutorialCalloutCard": {
       "title": "Confused where to start?",
@@ -40,7 +40,7 @@
   },
   "AppDemoCard": {
     "title": "Styling Examples",
-    "description": "Some examples of how Iconex can be styled & modified in the theme editor.",
+    "description": "Some examples of how Iconaro can be styled & modified in the theme editor.",
     "TabInfo": {
       "backgroundToggle": "Display Background",
       "previewTitle": "Preview:",
