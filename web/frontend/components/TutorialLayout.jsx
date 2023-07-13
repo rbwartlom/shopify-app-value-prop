@@ -13,6 +13,8 @@ import {
 } from '@shopify/polaris';
 import {useState} from 'react';
 
+import { settingsOne } from '../assets';
+
 import {useTranslation, Trans} from 'react-i18next';
 
 export function InstallationGuideSection() {
@@ -171,7 +173,7 @@ export function SettingsGuideCard() {
               alt=""
               width="100%"
               height="100%"
-              src="../../assets/Settings_1.webp"
+              src={settingsOne}
               style={{
                 borderRight: '1px solid #000',
               }}

@@ -10,6 +10,8 @@ import {
 import {useState} from 'react';
 import {InstallationGuideSection} from '../TutorialLayout';
 
+import { secureDemoIcon, returnsDemoIcon, plantDemoIcon, warningDemoIcon } from '../../assets';
+
 import {useTranslation} from 'react-i18next';
 
 const BulletDemo = ({background}) => {
@@ -33,7 +35,7 @@ const BulletDemo = ({background}) => {
         <div className="value-bg-flex-wrapper" style={backGroundStyle}>
           <div className="value-container">
             <img
-              src="../../assets/plant_demo_icon.png"
+              src={plantDemoIcon}
               width={35}
               height={35}
               className="value-image"
@@ -42,7 +44,7 @@ const BulletDemo = ({background}) => {
           </div>
           <div className="value-container value-padding-between">
             <img
-              src="../../assets/returns_demo_icon.png"
+              src={returnsDemoIcon}
               width={35}
               height={35}
               className="value-image"
@@ -51,7 +53,7 @@ const BulletDemo = ({background}) => {
           </div>
           <div className="value-container value-padding-between">
             <img
-              src="../../assets/secure_demo_icon.png"
+              src={secureDemoIcon}
               width={35}
               height={35}
               className="value-image"
@@ -85,7 +87,7 @@ const IconDemo = ({background}) => {
         <div className="background value-bg-flex-wrapper">
           <div className="value-container">
             <img
-              src="../../assets/plant_demo_icon.png"
+              src={plantDemoIcon}
               width={35}
               height={35}
               className="value-image"
@@ -94,7 +96,7 @@ const IconDemo = ({background}) => {
           </div>
           <div className="value-container value-padding-between">
             <img
-              src="../../assets/returns_demo_icon.png"
+              src={returnsDemoIcon}
               width={35}
               height={35}
               className="value-image"
@@ -126,7 +128,7 @@ const NotificationDemo = () => {
         <div className="background value-bg-flex-wrapper">
           <div className="value-container">
             <img
-              src="../../assets/warning_demo_icon.png"
+              src={warningDemoIcon}
               width={35}
               height={35}
               className="value-image"
