@@ -3,6 +3,7 @@ import AppDemoCard from './cards/AppDemoCard';
 import {Trans, useTranslation} from 'react-i18next';
 import {useAuthenticatedFetch} from '../hooks';
 import {useEffect, useState} from 'react';
+import {CircleTickMajor} from '@shopify/polaris-icons';
 
 export function SupportCalloutCard() {
   const {t} = useTranslation();
@@ -72,16 +73,24 @@ export function ConditionalSetupBannerSection() {
         <Banner
           status="info"
           title={t('Tutorial.ConditionalSetupBannerSection.title')}
-          action={{content: t('Tutorial.ConditionalSetupBannerSection.primaryButtonText'), url: '/tutorial'}}
+          action={{
+            content: t(
+              'Tutorial.ConditionalSetupBannerSection.primaryButtonText',
+            ),
+            url: '/tutorial',
+          }}
           secondaryAction={{
-            content: t('Tutorial.ConditionalSetupBannerSection.secondaryButtonText'),
+            content: t(
+              'Tutorial.ConditionalSetupBannerSection.secondaryButtonText',
+            ),
             onAction: handleDontShowAgain,
           }}
           onDismiss={() => setShowNotification(false)}
+          icon={CircleTickMajor}
         >
           <p>
             <Trans i18nKey="Tutorial.ConditionalSetupBannerSection.description">
-            {t('Tutorial.ConditionalSetupBannerSection.description')}
+              {t('Tutorial.ConditionalSetupBannerSection.description')}
             </Trans>
           </p>
         </Banner>

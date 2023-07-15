@@ -141,7 +141,7 @@
       "modalTitle": "So geht's"
     },
     "ConditionalSetupBannerSection": {
-      "title": "Lerne, wie du die App konfigurierst",
+      "title": "App installiert, schau dir die Setup-Anleitung an",
       "description": "Wir haben eine Schritt-für-Schritt-Anleitung vorbereiten. <br /> Du findest sie auf der \"Setup-Anleitung\"-Seite",
       "primaryButtonText": "Zur Setup-Anleitung",
       "secondaryButtonText": "Nicht mehr anzeigen"
