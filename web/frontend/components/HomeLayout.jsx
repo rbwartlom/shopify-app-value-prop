@@ -1,9 +1,20 @@
-import {CalloutCard, Layout, Banner, Link} from '@shopify/polaris';
+import {
+  CalloutCard,
+  Layout,
+  Banner,
+  Form,
+  HorizontalStack,
+  TextField,
+  LegacyCard,
+  Button,
+  Toast,
+} from '@shopify/polaris';
 import AppDemoCard from './cards/AppDemoCard';
 import {Trans, useTranslation} from 'react-i18next';
 import {useAuthenticatedFetch} from '../hooks';
 import {useEffect, useState} from 'react';
 import {CircleTickMajor} from '@shopify/polaris-icons';
+import {sendEmail} from '../utils/emailService';
 
 export function SupportCalloutCard() {
   const {t} = useTranslation();
@@ -99,6 +110,60 @@ export function ConditionalSetupBannerSection() {
   );
 }
 
+export function MissingFeatureFormCard() {
+  const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const {t} = useTranslation();
+
+  const handleSubmit = async () => {
+    const emailObject = {
+      email: 'features@artelomo.com',
+      name: 'none',
+      message,
+    };
+    if (message !== '') {
+      sendEmail(emailObject);
+      setMessage('');
+      setSubmitted(true);
+    }
+  };
+
+  return (
+    <>
+      {submitted && (
+        <Toast
+          content={t('HomeLayout.MissingFeatureFormCard.submittedToast')}
+          onDismiss={() => setSubmitted(false)}
+        />
+      )}
+      <LegacyCard
+        title={t('HomeLayout.MissingFeatureFormCard.title')}
+        sectioned
+      >
+        <Form onSubmit={handleSubmit}>
+          <HorizontalStack blockAlign="end" wrap={false} gap="1">
+            <div style={{flex: '8.5 0px'}}>
+              <TextField
+                type="text"
+                value={message}
+                onChange={setMessage}
+                label={t('HomeLayout.MissingFeatureFormCard.label')}
+                placeholder={t('HomeLayout.MissingFeatureFormCard.placeholder')}
+              />
+            </div>
+            <div style={{flex: '1.5 0px', maxWidth: '6rem'}}>
+              <Button submit primary fullWidth>
+                {t('HomeLayout.MissingFeatureFormCard.buttonContent')}
+              </Button>
+            </div>
+          </HorizontalStack>
+        </Form>
+      </LegacyCard>
+    </>
+  );
+}
+
 export default function HomeLayout() {
   return (
     <>
@@ -106,6 +171,9 @@ export default function HomeLayout() {
         <ConditionalSetupBannerSection />
         <Layout.Section>
           <AppDemoCard />
+        </Layout.Section>
+        <Layout.Section>
+          <MissingFeatureFormCard />
         </Layout.Section>
         <Layout.Section oneHalf>
           <SupportCalloutCard />

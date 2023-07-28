@@ -24,6 +24,14 @@
       "title": "Du weißt nicht, wo du anfangen sollst?",
       "buttonContent": "Zu unserer Setup-Anleitung",
       "description": "In unserem Tutorial und unserem Video leiten wir dich durch den Setup-Prozess."
+    },
+    "MissingFeatureFormCard": {
+      "title": "Fehlt etwas?",
+      "description": "Melde hier gerne anonym Fehler oder fehlende Funktionen :)",
+      "label": "Dein Funktionswunsch",
+      "placeholder": "z. B. \"Styling X fehlt\"",
+      "buttonContent": "Senden",
+      "submittedToast": "Nachricht abgeschickt"
     }
   },
   "EditorSettings": {

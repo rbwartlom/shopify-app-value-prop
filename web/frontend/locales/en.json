@@ -24,6 +24,14 @@
       "title": "Confused where to start?",
       "buttonContent": "Go to our setup guide",
       "description": "Check out our guide and video to learn how to get started."
+    },
+    "MissingFeatureFormCard": {
+      "title": "Missing a feature?",
+      "description": "Feel free to anonymously submit any errors or missing features here :)",
+      "label": "Your feature request",
+      "placeholder": "e.g. \"Add X icon styling\"",
+      "buttonContent": "Send",
+      "submittedToast": "Feature request submitted"
     }
   },
   "EditorSettings": {
