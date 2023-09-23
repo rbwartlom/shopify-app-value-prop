@@ -16,14 +16,14 @@
   },
   "HomeLayout": {
     "SupportCalloutCard": {
-      "title": "Having problems?",
+      "title": "Having problems? Missing a feature?",
       "buttonContent": "Contact us",
       "description": "Iconaro is happy to help, shoot us a message and we'll respond within 24hrs :)"
     },
     "TutorialCalloutCard": {
       "title": "Confused where to start?",
       "buttonContent": "Go to our setup guide",
-      "description": "Check out our guide and video to learn how to get started."
+      "description": "Check out our guide and video to learn how to get started. Or shoot us a message and we'll help you out ASAP."
     },
     "MissingFeatureFormCard": {
       "title": "Missing a feature?",

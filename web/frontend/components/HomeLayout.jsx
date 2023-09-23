@@ -172,9 +172,6 @@ export default function HomeLayout() {
         <Layout.Section>
           <AppDemoCard />
         </Layout.Section>
-        <Layout.Section>
-          <MissingFeatureFormCard />
-        </Layout.Section>
         <Layout.Section oneHalf>
           <SupportCalloutCard />
         </Layout.Section>
