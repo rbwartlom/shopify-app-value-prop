@@ -5,7 +5,7 @@
   },
   "SupportPage": {
     "title": "Contact Iconaro", 
-    "subtitle": "We respond within 24hrs"
+    "subtitle": "We respond within 24hrs - You can also contact us through the purple chat bubble."
   },
   "TutorialPage": {
     "title": "Setup guide"
@@ -18,7 +18,7 @@
     "SupportCalloutCard": {
       "title": "Having problems? Missing a feature?",
       "buttonContent": "Contact us",
-      "description": "Iconaro is happy to help, shoot us a message and we'll respond within 24hrs :)"
+      "description": "Iconaro is happy to help, shoot us a message and we'll respond within 24hrs. When available, you can also use the purple chat bubble to contact us :)"
     },
     "TutorialCalloutCard": {
       "title": "Confused where to start?",
